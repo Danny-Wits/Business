@@ -1,0 +1,159 @@
+#s1 {
+ 
+  background-color: #f8f9fa;
+}
+
+#i1 {
+  z-index: 10;
+  background-image: url(../images/p4.jpg);
+}
+#i2 {
+  z-index: 9;
+  background-image: url(../images/p1.jpeg);
+}
+#i3 {
+  z-index: 8;
+  background-image: url(../images/p2.jpeg);
+}
+#i4 {
+  z-index: 7;
+  background-image: url(../images/p3.jpeg);
+}
+
+.scroller {
+  height: 100vh;
+  display: flex;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-item {
+  background-size: cover;
+  background-position: center;
+  width: 100vw;
+  height: 100%;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  color: white;
+  padding: 2rem;
+}
+
+.img-item::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: -1;
+}
+
+.img-item .title {
+  font-size: 4rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
+.img-item p {
+  font-size: 1.2rem;
+  max-width: 700px;
+  margin-bottom: 2.5rem;
+  line-height: 1.6;
+  white-space: normal;
+  overflow-wrap: break-word;
+  word-wrap: break-word;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.img-item button {
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.img-item button::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(255, 255, 255, 0.2);
+  transition: all 0.3s ease;
+}
+
+.img-item button:hover::before {
+  left: 100%;
+}
+
+.img-item button:hover {
+  background-color: white;
+  color: #333;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.button-div {
+  position: absolute;
+  bottom: 2rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 4rem;
+  z-index: 99;
+}
+i {
+  font-size: 1.2rem;
+  color: #fff;
+}
+.button-div button {
+  background-color: transparent;
+  outline: none;
+  border: none;
+}
+#back-icon:hover {
+  color: gray;
+}
+#front-icon:hover {
+  color: gray;
+}
+#pause-icon:hover {
+  color: gray;
+}
+
+section {
+  height: 100vh;
+}
+
+@media (max-width: 768px) {
+  .img-item .title {
+    font-size: 2.5rem;
+  }
+
+  .img-item p {
+    font-size: 1rem;
+    max-width: 90%;
+  }
+
+  .img-item button,
+  .button-div button {
+    padding: 0.8rem 1.5rem;
+    font-size: 0.9rem;
+  }
+}
