@@ -1,4 +1,76 @@
 #s2 {
-  background-color: blue;
-  
+  overflow-x: hidden;
+}
+#img-div {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-image: url("../images/s4.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.list-group {
+  width: 50%;
+  height: 90%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 7vh;
+}
+
+.list-item {
+  font-size: 6vh;
+  position: relative;
+  font-weight: 600;
+  color: #000000;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  text-decoration: none;
+  z-index: 99;
+}
+
+.list-container {
+  position: relative;
+}
+.bar {
+  position: absolute;
+  display: flex;
+  gap: 2vw;
+  top: 30%;
+  height: 40%;
+  left: calc(-50vw + 50%);
+  background-color: #f5e41b;
+  display: flex;
+  white-space: nowrap;
+  z-index: 95;
+  animation: move;
+  animation: move 8s linear 0s infinite;
+}
+.none .bar {
+  display: none;
+}
+.hider {
+  position: absolute;
+  width: 120%;
+  top: 30%;
+  height: 40%;
+  left: -10%;
+  background-color: #f5e31bcd;
+  z-index: 96;
+  backdrop-filter: 10px;
+}
+.none .hider {
+  display: none;
+}
+@keyframes move {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-33%);
+  }
 }

@@ -10,10 +10,11 @@ body,
 html {
   font-family: "Poppins", sans-serif;
   overflow-x: hidden;
+  background-color: transparent;
 }
 main {
   height: 100vh;
-  width: 100vw;
+  width: 101vw;
   overflow: auto;
   scroll-snap-type: y mandatory;
   scroll-snap-stop: normal;
@@ -22,13 +23,16 @@ main {
 section {
   height: 100vh;
   scroll-snap-align: start;
-}
-main::-webkit-scrollbar {
-  width: 5px;
+  transition: all 2s ease-in;
 }
 
-main::-webkit-scrollbar-track {
-  background-color: black;
+/*scroller*/
+main::-webkit-scrollbar {
+  width: 0px;
+}
+
+/* main::-webkit-scrollbar-track {
+  background: black;
 }
 
 main::-webkit-scrollbar-thumb {
@@ -36,4 +40,4 @@ main::-webkit-scrollbar-thumb {
   background-repeat: no-repeat, no-repeat;
   background-size: 20px;
   transform: translateX(-200px);
-}
+} */

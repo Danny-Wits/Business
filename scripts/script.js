@@ -1,7 +1,8 @@
 let index = 0;
-let running = false;
+let running = true;
 const imageItemList = document.getElementsByClassName("img-item");
 const pauseIcon = document.getElementById("pause-icon");
+
 const forward = () => {
   gsap.fromTo(
     imageItemList[index],
@@ -77,4 +78,51 @@ let active = false;
 const toggle = () => {
   active = !active;
   navLinks.style.display = active ? "flex" : "none";
+  document.getElementsByTagName("nav")[0].style.backdropFilter = active
+    ? "blur(20px)"
+    : "blur(0px)";
 };
+
+const s2Links = document.getElementsByClassName("list-container");
+const s2ImgContainer = document.getElementById("img-div");
+let isMouseOver = false;
+console.log(Array.from(s2Links));
+Array.from(s2Links).forEach((element) => {
+  element.addEventListener("mouseenter", () => {
+    element.classList.remove("none");
+    isMouseOver = true;
+    s2ImgContainer.style.backgroundImage = `url(${element.getAttribute(
+      "data-image"
+    )})`;
+  });
+  element.addEventListener("mouseleave", () => {
+    element.classList.add("none");
+    isMouseOver = false;
+  });
+});
+
+let s2Index = 0;
+
+function animateS2() {
+  if (s2Index == s2Links.length) {
+    s2Index = 0;
+  }
+  if (s2Index == 0) {
+    s2Links[s2Links.length - 1].dispatchEvent(new Event("mouseleave"));
+    s2Index++;
+    s2Links[0].dispatchEvent(new Event("mouseenter"));
+  } else {
+    s2Links[s2Index - 1].dispatchEvent(new Event("mouseleave"));
+    s2Links[s2Index].dispatchEvent(new Event("mouseenter"));
+    s2Index++;
+  }
+}
+
+const startAnimationS2 = () => {
+  animateS2();
+  setTimeout(startAnimationS2, 3000);
+};
+
+if (window.innerWidth < 600) {
+  startAnimationS2();
+}
