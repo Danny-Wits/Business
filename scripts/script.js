@@ -1,15 +1,3 @@
-const locomotiveScroll = new LocomotiveScroll({
-  el: document.querySelector("[data-scroll-container]"),
-  smooth: true,
-  mobile: {
-    smooth: true,
-  },
-  tablet: {
-    smooth: true,
-  },
-  multiplier: 2.5,
-});
-
 let index = 0;
 let running = false;
 const imageItemList = document.getElementsByClassName("img-item");
