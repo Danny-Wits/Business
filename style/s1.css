@@ -1,22 +1,23 @@
 #s1 {
   background-color: #f8f9fa;
+  /* display: none; */
 }
 
 #i1 {
   z-index: 10;
-  background-image: url(../images/p4.jpg);
+  background-image: url(../images/p6.jpg);
 }
 #i2 {
   z-index: 9;
-  background-image: url(../images/p1.jpeg);
+  background-image: url(../images/s3.jpg);
 }
 #i3 {
   z-index: 8;
-  background-image: url(../images/p2.jpeg);
+  background-image: url(../images/p7.jpg);
 }
 #i4 {
   z-index: 7;
-  background-image: url(../images/p3.jpeg);
+  background-image: url(../images/s2.jpg);
 }
 
 .scroller {
@@ -48,7 +49,7 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.5);
+  background-color: rgba(0, 0, 0, 0.267);
   z-index: -1;
 }
 
@@ -110,7 +111,7 @@
 
 .button-div {
   position: absolute;
-  bottom: 2rem;
+  bottom: 3rem;
   left: 50%;
   transform: translateX(-50%);
   display: flex;

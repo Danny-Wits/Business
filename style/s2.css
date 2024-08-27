@@ -1,5 +1,6 @@
 #s2 {
   overflow-x: hidden;
+  /* display: none; */
 }
 #img-div {
   width: 100%;
@@ -11,6 +12,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  backdrop-filter: blur(10px);
 }
 .list-group {
   width: 50%;
@@ -23,14 +25,19 @@
 }
 
 .list-item {
-  font-size: 6vh;
+  font-size: 5vw;
   position: relative;
-  font-weight: 600;
+  font-weight: 300;
   color: #000000;
   text-transform: uppercase;
   letter-spacing: 2px;
   text-decoration: none;
   z-index: 99;
+  transition: all 0.2s ease-in;
+}
+.list-item:hover {
+  font-size: 6vw;
+  color: white;
 }
 
 .list-container {
@@ -39,6 +46,7 @@
 .bar {
   position: absolute;
   display: flex;
+  align-items: center;
   gap: 2vw;
   top: 30%;
   height: 40%;
@@ -72,5 +80,14 @@
   }
   to {
     transform: translateX(-33%);
+  }
+}
+
+@media (max-width: 600px) {
+  .list-item {
+    font-size: 7vh;
+  }
+  .list-item-hover {
+    font-size: 8vh;
   }
 }
