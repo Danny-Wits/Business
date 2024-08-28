@@ -25,7 +25,7 @@
       src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
       defer
     ></script>
-
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
     <!-- Local css -->
     <link rel="stylesheet" href="/style/navBar.css" />
     <link rel="stylesheet" href="/style/s1.css" />
@@ -34,10 +34,8 @@
     <link rel="stylesheet" href="/style/s4.css" />
 
     <link rel="stylesheet" href="style/structure.css" />
-    <link rel="stylesheet" href="style/locomotive-scroll.css" />
 
     <!-- Local js -->
-    <script src="scripts/locomotive-scroll.min.js" defer></script>
     <script src="scripts/script.js" defer></script>
 
     <title>Business</title>
@@ -45,20 +43,38 @@
   <body>
     <header>
       <nav>
-        <div id="title">Logo</div>
+        <div id="title"><p>CodeCrew</p></div>
         <button id="toggle" onclick="toggle()">
           <i class="bi bi-list"></i>
         </button>
         <div id="link">
           <a onclick="scrollToElement('s1',true)">Home</a>
+          <a onclick="scrollToElement('s4',true)">Projects</a>
           <a onclick="scrollToElement('s3',true)">Services</a>
-          <a onclick="scrollToElement('s4',true)">Contact</a>
-          <a href="http://">Portfolio</a>
-          <a onclick="scrollToElement('s4')">About us</a>
+          <a onclick="scrollToElement('s5',true)">Contact</a>
+          <a href="https://my.timesreport.in/">Portfolio</a>
+          <a onclick="scrollToElement('s5')">About us</a>
         </div>
       </nav>
     </header>
-
+    <div id="section-selector">
+      <div class="section-link">
+        <a onclick="scrollToElement('s3')">Services</a>
+        <i class="bi bi-arrows-vertical"></i>
+      </div>
+      <div class="section-link">
+        <a onclick="scrollToElement('s4')">Projects</a>
+        <i class="bi bi-arrows-vertical"></i>
+      </div>
+      <div class="section-link">
+        <a onclick="scrollToElement('s2')">Team</a>
+        <i class="bi bi-arrows-vertical"></i>
+      </div>
+      <div class="section-link">
+        <a onclick="scrollToElement('s5')">About us</a>
+        <i class="bi bi-arrows-vertical"></i>
+      </div>
+    </div>
     <main>
       <section id="s1">
         <div class="scroller">
@@ -166,7 +182,7 @@
                 <p>Blockchain Solutions</p>
                 <p>Green Technology Projects</p>
               </div>
-              <a href="" class="list-item">Project</a>
+              <a onclick="scrollToElement('s4')" class="list-item">Project</a>
             </div>
             <div class="list-container none" data-image="./images/s3.jpg">
               <div class="hider"></div>
@@ -187,9 +203,9 @@
                 <p>Technical Writers</p>
                 <p>Customer Success Managers</p>
               </div>
-              <a href="" class="list-item">Team</a>
+              <a onclick="scrollToElement('s5')" class="list-item">Team</a>
             </div>
-            <div class="list-container none" data-image="./images/s1.jpg">
+            <div class="list-container none" data-image="./images/p6.jpg">
               <div class="hider"></div>
               <div class="bar">
                 <p>24/7 Technical Support</p>
@@ -208,7 +224,65 @@
                 <p>Performance Analytics</p>
                 <p>Continuous Improvement Initiatives</p>
               </div>
-              <a href="" class="list-item">Support</a>
+              <a onclick="scrollToElement('s5')" class="list-item">Support</a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section id="s4">
+        <div class="project-group">
+          <div class="project" id="pr1">
+            <div class="text-div">
+              <h2>Title</h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat, amet.
+              </p>
+            </div>
+          </div>
+          <div class="project" id="pr2">
+            <div class="text-div">
+              <h2>Title</h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat, amet.
+              </p>
+            </div>
+          </div>
+          <div class="project" id="pr3">
+            <div class="text-div">
+              <h2>Title</h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat, amet.
+              </p>
+            </div>
+          </div>
+          <div class="project" id="pr4">
+            <div class="text-div">
+              <h2>Title</h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat, amet.
+              </p>
+            </div>
+          </div>
+          <div class="project" id="pr5">
+            <div class="text-div">
+              <h2>Title</h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat, amet.
+              </p>
+            </div>
+          </div>
+          <div class="project" id="pr6">
+            <div class="text-div">
+              <h2>Title</h2>
+              <p>
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+                Repellat, amet.
+              </p>
             </div>
           </div>
         </div>
@@ -298,7 +372,8 @@
           </div>
         </div>
       </section>
-      <section id="s4"></section>
+
+      <section id="s5"></section>
     </main>
     <footer></footer>
   </body>

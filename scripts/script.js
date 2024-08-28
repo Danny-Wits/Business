@@ -71,7 +71,9 @@ const startAnimation = () => {
   }
 };
 
-document.addEventListener("DOMContentLoaded", startAnimation);
+document.addEventListener("DOMContentLoaded", () => {
+  startAnimation();
+});
 
 //nav toggle
 const navLinks = document.getElementById("link");
@@ -172,3 +174,24 @@ const createPopUp = (e) => {
 const closePopUp = () => {
   gsap.to(popUp, { opacity: 0, scale: 0.1, display: "none", duration: 0.3 });
 };
+
+//s4 horizontal scroll
+
+const scrollContainer = document.querySelector(".project-group");
+scrollContainer.addEventListener("wheel", (e) => {
+  const scrollLength = e.deltaY * 2;
+  const scrollEndPosition =
+    scrollContainer.scrollWidth - scrollContainer.clientWidth;
+  if (scrollContainer.scrollLeft === 0 && scrollLength < 0) {
+    return;
+  }
+
+  if (
+    scrollContainer.scrollLeft >= scrollEndPosition - 10 &&
+    scrollLength > 0
+  ) {
+    return;
+  }
+  e.preventDefault();
+  scrollContainer.scrollLeft += scrollLength;
+});
