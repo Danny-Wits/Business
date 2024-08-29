@@ -3,8 +3,19 @@ let running = true;
 let mobile = window.innerWidth < 600;
 const imageItemList = document.getElementsByClassName("img-item");
 const pauseIcon = document.getElementById("pause-icon");
+const s1 = document.getElementById("s1");
+const s2 = document.getElementById("s2");
+const s4 = document.getElementById("s4");
+
+const elementIsVisibleInViewport = (el) => {
+  const { top } = el.getBoundingClientRect();
+  return top >= 0 && top < window.innerHeight;
+};
 
 const forward = () => {
+  if (!elementIsVisibleInViewport(s1)) {
+    return;
+  }
   gsap.fromTo(
     imageItemList[index],
     { x: 0 },
@@ -67,15 +78,35 @@ const backward = () => {
 const startAnimation = () => {
   if (running) {
     forward();
-    setTimeout(startAnimation, 5000);
+    setTimeout(startAnimation, 3000);
   }
 };
 
-document.addEventListener("DOMContentLoaded", () => {
+//!loader
+const loaderVideo = document.getElementById("loader-video");
+
+loaderVideo.addEventListener("play", () => {
+  gsap.to(".loaderMask", {
+    width: "100%",
+    duration: 2.2,
+    ease: "none",
+    display: "none",
+  });
+});
+loaderVideo.addEventListener("ended", () => {
+  // gsap.fromTo("#main", { y: "100%" }, { y: 0, duration: 1 });
+  gsap.to(".loader", {
+    x: "-100%",
+    duration: 0.7,
+    display: "none",
+  });
   startAnimation();
 });
 
-//nav toggle
+document.addEventListener("DOMContentLoaded", (event) => {
+  loaderVideo.play();
+});
+//!nav toggle
 const navLinks = document.getElementById("link");
 
 let active = false;
@@ -88,7 +119,7 @@ const toggle = () => {
     : "blur(0px)";
 };
 
-//s2 hover
+//!s2 hover
 const s2Links = document.getElementsByClassName("list-container");
 const s2LinksAnchors = document.getElementsByClassName("list-item");
 const s2ImgContainer = document.getElementById("img-div");
@@ -108,10 +139,13 @@ Array.from(s2Links).forEach((element) => {
   });
 });
 
-//s2 mobile animation
+//!s2 mobile animation
 let s2Index = 0;
 
 function animateS2() {
+  if (!elementIsVisibleInViewport(s2)) {
+    return;
+  }
   if (s2Index == s2Links.length) {
     s2Index = 0;
   }
@@ -139,7 +173,7 @@ if (window.innerWidth < 600) {
   startAnimationS2();
 }
 
-//scroll to function
+//!scroll to function
 const main = document.getElementsByTagName("main")[0];
 const scrollToElement = (e, closeMenu) => {
   if (closeMenu) toggle();
@@ -148,11 +182,10 @@ const scrollToElement = (e, closeMenu) => {
   element.addEventListener("click", (event) => {
     event.preventDefault();
   });
-  console.log(element.getBoundingClientRect().y);
   main.scrollTop += element.getBoundingClientRect().y;
 };
 
-//s3 popup
+//!s3 popup
 const s3 = document.getElementById("s3");
 const popUp = document.getElementById("popup");
 const createPopUp = (e) => {
@@ -175,7 +208,7 @@ const closePopUp = () => {
   gsap.to(popUp, { opacity: 0, scale: 0.1, display: "none", duration: 0.3 });
 };
 
-//s4 horizontal scroll
+//!s4 horizontal scroll
 
 const scrollContainer = document.querySelector(".project-group");
 scrollContainer.addEventListener("wheel", (e) => {

@@ -49,11 +49,12 @@
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: rgba(0, 0, 0, 0.267);
+  background-color: rgba(0, 0, 0, 0.5);
   z-index: -1;
 }
 
 .img-item .title {
+  font-family: "Caveat", cursive;
   font-size: 4rem;
   font-weight: 600;
   margin-bottom: 1.5rem;
@@ -61,7 +62,7 @@
 }
 
 .img-item p {
-  font-size: 1.2rem;
+  font-size: 1.4rem;
   max-width: 700px;
   margin-bottom: 2.5rem;
   line-height: 1.6;

@@ -25,7 +25,8 @@
 }
 
 .list-item {
-  font-size: 4vw;
+  font-family: "Caveat", cursive;
+  font-size: 4.4vw;
   position: relative;
   font-weight: 300;
   color: #000000;
@@ -90,6 +91,7 @@
   .list-item-hover {
     font-size: 8vh;
     color: black;
+    font-weight: 600;
   }
   .list-item:hover {
     font-size: 7vh;

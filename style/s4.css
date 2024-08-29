@@ -11,7 +11,7 @@
 }
 
 .project-group {
-  padding: 2rem;
+  padding: 0.5rem;
   width: fit-content;
   height: 70vh;
   overflow-x: scroll;
@@ -72,6 +72,7 @@
   height: 30%;
   transition: all 0.5s ease-in-out;
   transform: translateY(20%);
+  padding: 1px;
 }
 .project:hover {
   animation: backgroundScroll 4s infinite alternate ease-in;
@@ -93,6 +94,7 @@
 
 #pr1 {
   background-image: url("../images/proj1.jpeg");
+  position: relative;
 }
 #pr2 {
   background-image: url("../images/proj2.jpg");
@@ -118,14 +120,30 @@
     background-position: bottom;
   }
 }
-
+.arrow-div {
+  display: none;
+}
 @media (max-width: 600px) {
   .project-group {
     height: 80vh;
     background-color: transparent;
   }
   .project {
-    width: 95vw;
+    width: 90vw;
     height: 100%;
+  }
+  .arrow-div {
+    display: block;
+    position: absolute;
+    top: calc(50% - 5rem / 2);
+    right: 0px;
+    padding: 2px;
+    z-index: 1000;
+    animation: zoomInOut 0.7s infinite alternate;
+    i {
+      font-size: 1.2rem;
+      font-weight: 500;
+      color: black;
+    }
   }
 }
