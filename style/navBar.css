@@ -7,15 +7,15 @@ nav {
   justify-content: space-between;
   align-items: center;
   padding: 1rem 2rem;
-  background-color: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(3px);
+  border-bottom: 1px solid yellow;
+  background-color: rgba(0, 0, 0, 0.909);
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
   z-index: 996;
   transition: all 0.3s ease;
 }
 
 nav:hover {
-  background-color: rgba(255, 255, 255, 0.2);
+  background-color: rgb(0, 0, 0);
 }
 
 #title {
@@ -39,6 +39,7 @@ nav:hover {
   font-weight: 400;
   transition: all 0.3s ease;
   position: relative;
+  cursor: pointer;
   text-shadow: 2px 1px 2px rgba(0, 0, 0, 0.35);
 }
 
@@ -49,7 +50,7 @@ nav:hover {
   height: 2px;
   bottom: -5px;
   left: 0;
-  background-color: #fff;
+  background-color: #fffb25;
   transition: width 0.3s ease;
 }
 
