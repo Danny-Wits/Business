@@ -60,6 +60,7 @@
 @media (max-width: 600px) {
   #s3 {
     height: fit-content;
+    min-height: 100vh;
     flex-direction: column;
     .title {
       margin-top: 10vh;
@@ -71,14 +72,30 @@
   .service-group {
     height: fit-content;
     margin-top: 1vh;
-    grid-template-columns: auto;
+    width: 94%;
+    grid-template-columns: 100%;
   }
   .service {
-    height: 30vh;
+    flex-direction: row;
+    justify-items: center;
+    align-items: center;
+    padding: 4px;
+    height: 15vh;
+    width: 100%;
+    border-radius: 9px;
+    gap: 0px;
+    h2 {
+      font-size: 2rem !important;
+    }
+    .text {
+      height: auto;
+    }
+    i {
+      display: flex;
+      font-size: 3rem;
+    }
     p {
-      font-size: small;
-      color: white;
-      padding-bottom: 2px;
+      display: none;
     }
   }
 }
