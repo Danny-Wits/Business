@@ -1,0 +1,119 @@
+#s6 {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(0, 0, 0);
+}
+.container {
+  border: 4px solid white;
+  margin-top: 12vh;
+  width: 90%;
+  height: 76vh;
+  display: grid;
+  grid-template-columns: 50% 50%;
+
+  .picture {
+    background-image: url(../images/aboutUs.jpeg);
+    background-position: -130px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    filter: brightness(70%);
+  }
+}
+.left {
+  background-color: rgb(255, 255, 10);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .text {
+    height: 80%;
+    padding: 2px 8vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    h2 {
+      font-family: "Caveat", cursive;
+      font-size: 5.1vw;
+      font-weight: bolder;
+    }
+    p {
+      text-align: justify;
+      font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+      font-weight: 200;
+      line-height: 4vh;
+      font-size: large;
+    }
+    button {
+      width: 55%;
+      padding: 1rem 0.5rem;
+      font-size: 0.9rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      background-color: transparent;
+      color: black;
+      border: 2px solid black;
+      border-radius: 50px;
+      cursor: pointer;
+      transition: all 0.3s ease;
+      position: relative;
+      overflow: hidden;
+    }
+
+    button::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: -100%;
+      width: 100%;
+      height: 100%;
+      background-color: rgb(0, 0, 0);
+      transition: all 0.3s ease;
+    }
+
+    button:hover::before {
+      left: 100%;
+    }
+
+    button:hover {
+      background-color: rgb(0, 0, 0);
+      color: white;
+      transform: translateY(-3px);
+      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.728);
+    }
+  }
+}
+@media (max-width: 600px) {
+  #s6 {
+    height: fit-content;
+    padding-bottom: 20vh;
+  }
+  .container {
+    height: fit-content;
+    border: 4px solid rgb(255, 255, 10);
+    grid-template-columns: 100%;
+  }
+  .left {
+    height: 80vh;
+  }
+  .left .text {
+    align-items: center;
+    height: 80vh;
+    padding: 10px 4vw;
+    button {
+      width: 70%;
+      font-size: small;
+    }
+    h2 {
+      font-size: 4rem;
+    }
+    p {
+      font-weight: 300;
+    }
+  }
+  .picture {
+    height: 80vh;
+  }
+}
