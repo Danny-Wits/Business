@@ -138,10 +138,6 @@ i {
   color: gray;
 }
 
-section {
-  height: 100vh;
-}
-
 @media (max-width: 768px) {
   .img-item .title {
     font-size: 2.5rem;

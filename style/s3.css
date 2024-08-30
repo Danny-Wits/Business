@@ -3,6 +3,9 @@
   display: flex;
   justify-content: start;
   align-items: center;
+  height: fit-content;
+  padding-bottom: 50vh;
+
   .title {
     font-size: 15vh;
     writing-mode: vertical-lr;
@@ -10,7 +13,7 @@
   }
 }
 .service-group {
-  margin-top: 10vh;
+  margin-top: 12vh;
   display: grid;
   width: 84%;
   height: fit-content;
@@ -43,19 +46,19 @@
     gap: 3px;
     h2 {
       font-family: "Caveat", cursive;
-      font-size: 2.3rem;
-      font-weight: 200;
+      font-size: 2.4rem;
+      font-weight: bold;
       color: rgb(255, 244, 43);
     }
     p {
-      font-size: medium;
+      font-size: large;
       color: white;
       padding-bottom: 4px;
     }
   }
 }
 .service:hover {
-  scale: 1.01;
+  scale: 1.03;
 }
 @media (max-width: 600px) {
   #s3 {
@@ -63,10 +66,11 @@
     min-height: 100vh;
     flex-direction: column;
     .title {
-      margin-top: 10vh;
+      margin-top: 11vh;
       font-size: 4rem;
       writing-mode: horizontal-tb;
       transform: rotate(0deg);
+      font-weight: 600;
     }
   }
   .service-group {
@@ -76,26 +80,25 @@
     grid-template-columns: 100%;
   }
   .service {
-    flex-direction: row;
-    justify-items: center;
-    align-items: center;
-    padding: 4px;
-    height: 15vh;
-    width: 100%;
-    border-radius: 9px;
-    gap: 0px;
-    h2 {
-      font-size: 2rem !important;
-    }
+    padding-top: 2vh;
+    padding-bottom: 3vh;
+    height: fit-content;
     .text {
-      height: auto;
+      h2 {
+        font-size: 30px;
+        color: white;
+      }
+      p {
+        font-size: small;
+      }
     }
+
+    /* align-items: center; */
+    /* text-align: center; */
     i {
-      display: flex;
-      font-size: 3rem;
-    }
-    p {
-      display: none;
+      font-size: 2.5rem;
+      margin-bottom: 1vh;
+      color: yellow;
     }
   }
 }
