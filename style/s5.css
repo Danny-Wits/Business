@@ -10,40 +10,82 @@
 
 .pillar-group {
   margin-top: 12vh;
-  width: 88%;
-  height: 68vh;
-  border-top: 2px dotted yellow;
-  border-bottom: 2px dotted yellow;
+  width: 90%;
+  height: 75vh;
   display: grid;
-  grid-template-columns: 50% 50%;
+  row-gap: 2vh;
+  grid-template-columns: 33% 33% 33%;
 }
 .pillar {
-  padding: 10px;
-  padding-left: 20px;
+  padding: 11px 60px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: start; */
+  /* align-items: center; */
   i {
-    font-size: 2rem;
+    font-size: 3.5rem;
+    display: flex;
+    color: black;
+  }
+  i::before {
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(255, 213, 0);
   }
   .text {
-    color: whitesmoke;
+    /* text-align: center; */
+    color: white;
     h2 {
+      /* font-family: "Caveat", cursive; */
+      margin-top: 20px;
       font-size: xx-large;
+    }
+    p {
+      padding-top: 2px;
+      font-size: medium;
     }
   }
 }
-.pillar:nth-child(1),
-.pillar:nth-child(4) {
-  i {
-    color: black;
+.pillar:hover {
+  border-radius: 2rem;
+  background-color: rgba(252, 252, 252, 0.15);
+  box-shadow: 1px 2px yellow;
+  /*i {
+    color: #000;
   }
-  background-color: yellow;
   .text {
-    color: black;
-    h2 {
-      font-size: xx-large;
-    }
+    color: #000;
+  } */
+}
+#pl1 {
+  i::before {
+    background-color: red;
+  }
+}
+#pl2 {
+  i::before {
+    background-color: greenyellow;
+  }
+}
+#pl3 {
+  i::before {
+    background-color: yellow;
+  }
+}
+
+#pl4 {
+  i::before {
+    background-color: blue;
+  }
+}
+#pl5 {
+  i::before {
+    background-color: violet;
+  }
+}
+#pl6 {
+  i::before {
+    background-color: aqua;
   }
 }
 @media (max-width: 600px) {
@@ -51,41 +93,25 @@
     height: fit-content;
   }
   .pillar {
-    padding-bottom: 20px;
+    padding: 10px;
+    padding-bottom: 50px;
+    i {
+      font-size: 3rem;
+    }
+    .text {
+      h2 {
+        margin-top: 6px;
+      }
+    }
   }
   .pillar-group {
     grid-template-columns: 100%;
     margin-bottom: 30vh;
     height: fit-content;
-    border: 1px dotted yellow;
+    /* border: 1px dotted yellow; */
     .text {
       p {
         font-size: small;
-      }
-    }
-  }
-  .pillar:nth-child(1),
-  .pillar:nth-child(3) {
-    i {
-      color: black;
-    }
-    background-color: yellow;
-    .text {
-      color: black;
-      h2 {
-        font-size: xx-large;
-      }
-    }
-  }
-  .pillar:nth-child(4) {
-    i {
-      color: white;
-    }
-    background-color: black;
-    .text {
-      color: white;
-      h2 {
-        font-size: xx-large;
       }
     }
   }

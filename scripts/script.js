@@ -107,15 +107,45 @@ document.addEventListener("DOMContentLoaded", (event) => {
   loaderVideo.play();
 });
 //!nav toggle
-const navLinks = document.getElementById("link");
+const navBar = document.getElementsByTagName("nav")[0];
+const mobileNav = document.getElementsByClassName("mobile-nav")[0];
+const toggleIcon = document.getElementById("toggle-icon");
 
 let active = false;
 const toggle = () => {
-  if (!mobile) return;
+  if (active) closeNavBar();
+  else {
+    toggleIcon.classList.remove("bi-list");
+    toggleIcon.classList.add("bi-x");
+    navBar.classList.add("toggled");
+    mobileNav.style.display = "flex";
+    gsap.fromTo(
+      mobileNav,
+      {
+        x: "100%",
+        opacity: 0,
+      },
+      {
+        x: "0",
+        opacity: 1,
+        duration: 1,
+        ease: "power1.out",
+      }
+    );
+  }
   active = !active;
-  navLinks.style.display = active ? "flex" : "none";
 };
-
+const closeNavBar = () => {
+  navBar.classList.remove("toggled");
+  toggleIcon.classList.add("bi-list");
+  toggleIcon.classList.remove("bi-x");
+  gsap.to(mobileNav, {
+    x: "100%",
+    opacity: 0,
+    display: "none",
+    ease: "power4.out",
+  });
+};
 //!scroll to function
 const main = document.getElementsByTagName("main")[0];
 const scrollToElement = (e, closeMenu) => {
@@ -148,3 +178,28 @@ const scrollToElement = (e, closeMenu) => {
 //   e.preventDefault();
 //   scrollContainer.scrollLeft += scrollLength;
 // });
+
+//!s8 changing mvv
+const imageDiv = document
+  .getElementById("mmv")
+  .getElementsByClassName("mvv-img")[0];
+const titleDiv = document
+  .getElementById("mmv")
+  .getElementsByClassName("mvv-title")[0];
+const subTitleDiv = document
+  .getElementById("mmv")
+  .getElementsByClassName("mvv-subtitle")[0];
+
+const mvvButtonList = document.getElementsByClassName("mvv-btn");
+function changeMVV(element) {
+  const title = element.textContent;
+  const image = element.getAttribute("data-image");
+  const info = element.getAttribute("data-info");
+  Array.from(mvvButtonList).forEach((e) => {
+    e.classList.remove("active");
+  });
+  element.classList.add("active");
+  imageDiv.style.backgroundImage = `url(${image}) `;
+  titleDiv.textContent = title;
+  subTitleDiv.textContent = info;
+}
