@@ -103,7 +103,7 @@
   .left .text {
     align-items: center;
     height: fit-content;
-    justify-content: baseline;
+    justify-content: center;
     padding: 10px 3vw;
 
     h2 {
