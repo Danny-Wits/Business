@@ -7,7 +7,6 @@
   background-color: rgb(0, 0, 0);
 }
 .container {
-  margin-top: 10vh;
   width: 100%;
   height: 90vh;
   display: grid;
@@ -89,21 +88,22 @@
 @media (max-width: 600px) {
   #s6 {
     height: fit-content;
-    padding-bottom: 20vh;
   }
   .container {
-    margin-top: 12vh;
+    margin-top: 10vh;
     padding-left: 10px;
     padding-right: 10px;
     height: fit-content;
     grid-template-columns: 100%;
+    padding-bottom: 20vh;
   }
   .left {
     height: fit-content;
   }
   .left .text {
     align-items: center;
-    justify-content: start;
+    height: fit-content;
+    justify-content: baseline;
     padding: 10px 3vw;
 
     h2 {
