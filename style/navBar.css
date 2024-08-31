@@ -73,7 +73,7 @@ nav:hover {
   transition: all 0.9s ease;
 }
 .mobile-nav {
-  position: absolute;
+  position: fixed;
   top: 9.9vh;
   right: 0px;
   width: 100%;
