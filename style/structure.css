@@ -78,7 +78,7 @@ section {
 }
 
 .loader {
-  display: none;
+  /* display: none; */
   position: absolute;
   background-color: black;
   top: 0px;
