@@ -1,0 +1,360 @@
+#s7 {
+  font-family: "Poppins", sans-serif;
+  padding: 9rem 0;
+  background-color: black;
+}
+#s7 .s7container {
+  max-width: 1200px;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  margin: 0 auto;
+  padding: 0 2rem;
+  flex-wrap: wrap;
+}
+#s7 .s7left .contactTitle h2 {
+  position: relative;
+  font-size: 28px;
+  color: #ddd;
+  display: inline-block;
+  margin-bottom: 25px;
+}
+#s7 .s7left .contactTitle h2::before {
+  content: "";
+  position: absolute;
+  width: 50%;
+  height: 1px;
+  background-color: #888;
+  top: 120%;
+  left: 0;
+}
+#s7 .s7left .contactTitle h2::after {
+  content: "";
+  position: absolute;
+  width: 25%;
+  height: 3px;
+  background-color: yellow;
+  top: calc(120% - 1px);
+  left: 0;
+}
+#s7 .s7left .contactTitle p {
+  font-size: 17px;
+  color: #ccc;
+  letter-spacing: 1px;
+  line-height: 1.2;
+  padding-bottom: 22px;
+}
+#s7 .s7left .contactInfo {
+  margin-bottom: 16px;
+}
+.contactInfo .iconGroup {
+  display: flex;
+  align-items: center;
+  margin: 25px 0px;
+}
+.iconGroup .icon {
+  width: 45px;
+  height: 45px;
+  border: 2px solid yellow;
+  border-radius: 50%;
+  margin-right: 20px;
+  position: relative;
+}
+.iconGroup .icon i {
+  font-size: 20px;
+  color: #ddd;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.iconGroup .details span {
+  display: block;
+  color: #888;
+  font-size: 18px;
+}
+.iconGroup .details span:nth-child(1) {
+  text-transform: uppercase;
+  color: #ccc;
+}
+#s7 .s7left .socialMedia {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 22px 0px 20px;
+}
+.socialMedia a {
+  width: 35px;
+  height: 35px;
+  text-decoration: none;
+  text-align: center;
+  margin-right: 15px;
+  border-radius: 5px;
+  background-color: yellow;
+  transition: 0.4s;
+}
+.socialMedia a i {
+  color: black;
+  font-size: 18px;
+  line-height: 35px;
+  border: 1px solid transparent;
+  transition-delay: 0.4s;
+}
+.socialMedia a:hover {
+  transform: translateZ(-6px);
+  background-color: #2e2e2e;
+  color: yellow;
+  border: 1px solid yellow;
+}
+.socialMedia a:hover i {
+  color: yellow;
+}
+
+/* Right column styles */
+.contact-container {
+  max-width: 400px;
+  width: 100%;
+  background-color: #e5e5e5;
+  padding: 11.4px 24px 22.8px 24px;
+  border-radius: 6.4px;
+  box-shadow: 0 3.2px 4.8px rgba(0, 0, 0, 0.1);
+}
+
+.contactUs-title {
+  text-align: center;
+  margin-top: 30px;
+  margin-bottom: 15.2px;
+  color: #1a1a1a;
+  font-weight: bold;
+  font-size: 22px;
+}
+
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 9.12px;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+.form-group label {
+  margin-bottom: 1.52px;
+  font-weight: bold;
+  color: #4d4d4d;
+}
+
+.form-group input,
+.form-group select,
+.form-group textarea {
+  padding: 3.8px;
+  background-color: #ffffff;
+  border: 0.76px solid #bfbfbf;
+  font-family: inherit;
+}
+
+.form-group textarea {
+  height: 68.4px;
+  resize: vertical;
+}
+
+.submit-btn {
+  background-color: yellow;
+  color: #1a1a1a;
+  border: none;
+  font-weight: 600;
+  padding: 13.4px;
+  border-radius: 3.2px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-size: 16.8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.submit-btn:hover {
+  background-color: #fff700;
+}
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-overlay.hidden {
+  display: none;
+}
+
+.modal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+  max-width: 80%;
+}
+
+.modal.success {
+  border: 2px solid #4caf50;
+}
+
+.modal.error {
+  border: 2px solid #f44336;
+}
+
+.modal p {
+  margin-bottom: 15px;
+}
+
+.close-modal {
+  background-color: #2196f3;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.close-modal:hover {
+  background-color: #1976d2;
+}
+
+.error-message {
+  color: #d32f2f;
+  font-size: 12px;
+  margin-top: 4px;
+  display: none;
+}
+
+#response-message {
+  margin-top: 16px;
+  padding: 12px;
+  border-radius: 4px;
+  text-align: center;
+  font-size: 14px;
+}
+
+#response-message.success {
+  background-color: #e8f5e9;
+  color: #2e7d32;
+  border: 1px solid #a5d6a7;
+}
+
+#response-message.error {
+  background-color: #fbe9e7;
+  color: #c62828;
+  border: 1px solid #ffab91;
+}
+
+.hidden {
+  display: none;
+}
+
+/* Responsive styles for smaller devices */
+@media only screen and (max-width: 768px) {
+  #s7 {
+    padding: 3rem 0;
+  }
+
+  #s7 .s7container {
+    flex-direction: column;
+    padding: 0 1rem;
+    align-items: center;
+  }
+
+  #s7 .s7left {
+    display: none;
+  }
+
+  #s7 .s7right {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-container {
+    max-width: 370px;
+    width: 90%;
+    padding: 20px;
+    margin: 0 auto;
+  }
+
+  .contactUs-title {
+    font-size: 24px;
+    margin-top: 15px;
+    margin-bottom: 20px;
+  }
+
+  .form-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 10px;
+    font-size: 14px;
+  }
+
+  .form-group textarea {
+    height: 100px;
+  }
+
+  .submit-btn {
+    font-size: 16px;
+    padding: 12px 20px;
+  }
+
+  /* Modal styles for smaller devices */
+  .modal {
+    max-width: 90%;
+    padding: 15px;
+  }
+
+  .modal p {
+    font-size: 14px;
+  }
+
+  .close-modal {
+    font-size: 14px;
+    padding: 8px 16px;
+  }
+}
+
+/* Additional styles for very small devices */
+@media only screen and (max-width: 480px) {
+  .contact-container {
+    padding: 15px;
+    width: 95%;
+  }
+
+  .contactUs-title {
+    font-size: 22px;
+  }
+
+  .form-group label {
+    font-size: 13px;
+  }
+
+  .form-group input,
+  .form-group select,
+  .form-group textarea {
+    padding: 8px;
+    font-size: 13px;
+  }
+
+  .submit-btn {
+    font-size: 14px;
+    padding: 10px 16px;
+  }
+}
