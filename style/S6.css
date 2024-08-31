@@ -7,10 +7,9 @@
   background-color: rgb(0, 0, 0);
 }
 .container {
-  border: 4px solid white;
-  margin-top: 12vh;
-  width: 90%;
-  height: 76vh;
+  margin-top: 10vh;
+  width: 100%;
+  height: 90vh;
   display: grid;
   grid-template-columns: 50% 50%;
 
@@ -23,7 +22,6 @@
   }
 }
 .left {
-  background-color: rgb(255, 255, 10);
   display: flex;
   justify-content: center;
   align-items: center;
@@ -33,9 +31,10 @@
     display: flex;
     flex-direction: column;
     justify-content: space-evenly;
+    color: white;
     h2 {
       font-family: "Caveat", cursive;
-      font-size: 5.1vw;
+      font-size: 80px;
       font-weight: bolder;
     }
     p {
@@ -53,8 +52,8 @@
       text-transform: uppercase;
       letter-spacing: 1px;
       background-color: transparent;
-      color: black;
-      border: 2px solid black;
+      color: white;
+      border: 2px solid white;
       border-radius: 50px;
       cursor: pointer;
       transition: all 0.3s ease;
@@ -69,7 +68,7 @@
       left: -100%;
       width: 100%;
       height: 100%;
-      background-color: rgb(0, 0, 0);
+      background-color: yellow;
       transition: all 0.3s ease;
     }
 
@@ -78,8 +77,10 @@
     }
 
     button:hover {
-      background-color: rgb(0, 0, 0);
-      color: white;
+      background-color: yellow;
+      border: 2px solid yellow;
+
+      color: black;
       transform: translateY(-3px);
       box-shadow: 0 10px 20px rgba(0, 0, 0, 0.728);
     }
@@ -91,29 +92,37 @@
     padding-bottom: 20vh;
   }
   .container {
+    margin-top: 12vh;
+    padding-left: 10px;
+    padding-right: 10px;
     height: fit-content;
-    border: 4px solid rgb(255, 255, 10);
     grid-template-columns: 100%;
   }
   .left {
-    height: 80vh;
+    height: fit-content;
   }
   .left .text {
     align-items: center;
-    height: 80vh;
-    padding: 10px 4vw;
-    button {
-      width: 70%;
-      font-size: small;
-    }
+    justify-content: start;
+    padding: 10px 3vw;
+
     h2 {
-      font-size: 4rem;
+      font-size: 64px;
+      padding-bottom: 20px;
     }
     p {
+      font-size: 14px;
       font-weight: 300;
+      padding-bottom: 20px;
+    }
+    button {
+      padding: 0.7rem 0.5rem;
+      width: 70%;
+      font-size: small;
+      margin-bottom: 20px;
     }
   }
   .picture {
-    height: 80vh;
+    height: 60vh;
   }
 }

@@ -149,7 +149,7 @@ const closeNavBar = () => {
 //!scroll to function
 const main = document.getElementsByTagName("main")[0];
 const scrollToElement = (e, closeMenu) => {
-  if (closeMenu) toggle();
+  if (closeMenu && window.innerWidth < 720) toggle();
   const element = document.getElementById(e);
 
   element.addEventListener("click", (event) => {

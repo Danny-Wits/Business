@@ -12,16 +12,18 @@
   margin-top: 12vh;
   width: 90%;
   height: 75vh;
-  display: grid;
-  row-gap: 2vh;
-  grid-template-columns: 33% 33% 33%;
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+  flex-wrap: wrap;
 }
 .pillar {
-  padding: 11px 60px;
+  padding: 11px 50px;
   display: flex;
   flex-direction: column;
-  /* justify-content: start; */
-  /* align-items: center; */
+  width: 25rem;
+  min-height: 35vh;
+  /* border: 2px solid yellow; */
   i {
     font-size: 3.5rem;
     display: flex;
@@ -36,7 +38,6 @@
     /* text-align: center; */
     color: white;
     h2 {
-      /* font-family: "Caveat", cursive; */
       margin-top: 20px;
       font-size: xx-large;
     }
@@ -49,52 +50,69 @@
 .pillar:hover {
   border-radius: 2rem;
   background-color: rgba(252, 252, 252, 0.15);
-  box-shadow: 1px 2px yellow;
-  /*i {
-    color: #000;
-  }
-  .text {
-    color: #000;
-  } */
 }
 #pl1 {
   i::before {
-    background-color: red;
+    background-color: #ff5722;
   }
+}
+#pl1:hover {
+  box-shadow: 1px 2px #ff5722;
 }
 #pl2 {
   i::before {
-    background-color: greenyellow;
+    background-color: #03a9f4;
   }
+}
+
+#pl2:hover {
+  box-shadow: 1px 2px #03a9f4;
 }
 #pl3 {
   i::before {
-    background-color: yellow;
+    background-color: #b7ff64;
   }
+}
+#pl3:hover {
+  box-shadow: 1px 2px #b7ff64;
 }
 
 #pl4 {
   i::before {
-    background-color: blue;
+    background-color: #d6953e;
   }
+}
+#pl4:hover {
+  box-shadow: 1px 2px #d6953e;
 }
 #pl5 {
   i::before {
-    background-color: violet;
+    background-color: #e91e63;
   }
+}
+#pl5:hover {
+  box-shadow: 1px 2px #e91e63;
 }
 #pl6 {
   i::before {
-    background-color: aqua;
+    background-color: #00bcd4;
   }
 }
+#pl6:hover {
+  box-shadow: 1px 2px #00bcd4;
+}
+
 @media (max-width: 600px) {
   #s4 {
     height: fit-content;
   }
+
   .pillar {
+    width: 45%;
     padding: 10px;
-    padding-bottom: 50px;
+    align-items: center;
+    justify-content: center;
+    min-height: 25vh;
     i {
       font-size: 3rem;
     }
@@ -105,14 +123,15 @@
     }
   }
   .pillar-group {
-    grid-template-columns: 100%;
-    margin-bottom: 30vh;
+    width: 100%;
     height: fit-content;
     /* border: 1px dotted yellow; */
     .text {
       p {
-        font-size: small;
+        display: none;
       }
     }
+    margin-top: 14vh !important;
+    padding-bottom: 30vh;
   }
 }

@@ -78,7 +78,7 @@ nav:hover {
   right: 0px;
   width: 100%;
   background-color: #fffb25;
-  display: flex;
+  display: none;
   justify-content: space-between;
   opacity: 0;
   gap: 2vw;
