@@ -81,7 +81,7 @@ section {
   background-color: black;
   height: 100vh;
   left: 0px;
-  display: none;
+  /* display: none; */
   position: absolute;
   top: 0px;
   width: 100vw;
