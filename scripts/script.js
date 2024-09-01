@@ -179,7 +179,7 @@ const scrollToElement = (e, closeMenu) => {
 //   scrollContainer.scrollLeft += scrollLength;
 // });
 //!s5 pillar animation for mobile
-const s5 = document.getElementById("s5");
+const s5 = document.getElementsByClassName("pillar-group")[0];
 const s5list = document.getElementsByClassName("pillar");
 let s5index = 0;
 function s5Animation() {
