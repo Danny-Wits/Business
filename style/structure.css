@@ -3,26 +3,26 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap");
 * {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
-  box-sizing: border-box;
 }
 
 body,
 html {
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 300;
-  font-optical-sizing: auto;
-  overflow: hidden;
   background-color: transparent;
+  font-family: "Titillium Web", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  overflow: hidden;
 }
 main {
   height: 100vh;
-  width: 101vw;
   overflow: auto;
-  scroll-snap-type: y mandatory;
-  scroll-snap-stop: normal;
   scroll-behavior: smooth;
+  scroll-snap-stop: normal;
+  scroll-snap-type: y mandatory;
+  width: 101vw;
 }
 section {
   min-height: 100vh;
@@ -30,47 +30,47 @@ section {
   /* transition: all 2s ease-in; */
 }
 #section-selector {
-  position: fixed;
-  right: 2px;
-  width: 9rem;
-  height: 26vh;
-  top: calc(50vh - 13vh);
-  z-index: 998;
+  align-items: center;
   display: flex;
   flex-direction: column;
-  align-items: center;
+  height: 26vh;
   justify-content: space-between;
+  position: fixed;
+  right: 2px;
+  top: calc(50vh - 13vh);
+  width: 9rem;
+  z-index: 998;
   /* background-color: aliceblue; */
   .section-link {
-    cursor: pointer;
-    width: 90%;
-    display: flex;
     align-items: center;
+    border-radius: 1rem;
+    cursor: pointer;
+    display: flex;
     justify-content: space-between;
     padding: 5px;
-    border-radius: 1rem;
+    width: 90%;
   }
   a {
-    opacity: 0;
     margin-left: 10px;
+    opacity: 0;
   }
   i {
+    border: 2px solid rgba(0, 0, 0, 0.3);
+    color: #fffb22;
     display: flex;
     font-size: 1.5rem;
-    color: #fffb22;
-    border: 2px solid rgba(0, 0, 0, 0.3);
     /* opacity: 0.7; */
   }
   .section-link:hover a {
+    color: white;
+    font-size: large;
     opacity: 1;
     width: 10rem;
-    font-size: large;
-    color: white;
   }
   .section-link:hover {
-    border: 3px solid #fffb22;
-    background-color: rgba(0, 0, 0, 0.582);
     backdrop-filter: blur(10px);
+    background-color: rgba(0, 0, 0, 0.582);
+    border: 3px solid #fffb22;
   }
   .section-link:hover i {
     border: 0px;
@@ -78,67 +78,67 @@ section {
 }
 
 .loader {
+  background-color: black;
+  height: 100vh;
+  left: 0px;
   display: none;
   position: absolute;
-  background-color: black;
   top: 0px;
-  left: 0px;
   width: 100vw;
-  height: 100vh;
   z-index: 999;
   video {
-    width: 100%;
     height: 100%;
     object-fit: cover;
+    width: 100%;
   }
   .title {
+    align-items: center;
+    animation: zoomInOut 1s infinite alternate;
+    color: #fffb22;
+    display: flex;
     font-family: "Caveat", cursive;
-    position: absolute;
-    top: calc(45vh);
-    width: 100%;
-    text-align: center;
-    z-index: 1001;
     font-size: 12rem;
     font-weight: 500;
-    color: #fffb22;
-    margin-bottom: 1.5rem;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    display: flex;
-    justify-content: center;
-    align-items: center;
     gap: 1rem;
-    animation: zoomInOut 1s infinite alternate;
+    justify-content: center;
+    margin-bottom: 1.5rem;
+    position: absolute;
+    text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+    top: calc(45vh);
+    width: 100%;
+    z-index: 1001;
 
     i {
-      display: flex;
-      color: #fffb22;
-      font-size: 3rem;
       animation: zoomInOut 1s infinite alternate;
       animation: rotation 1s infinite;
+      color: #fffb22;
+      display: flex;
+      font-size: 3rem;
     }
   }
   .blur {
+    backdrop-filter: blur(3px);
+    background-color: rgba(0, 0, 0, 0.7);
+    height: 100%;
+    left: 0px;
     position: absolute;
     top: 0px;
-    left: 0px;
     width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.7);
-    backdrop-filter: blur(3px);
     z-index: 1000;
   }
   .loading {
+    height: 1vh;
+    left: 0px;
     position: absolute;
     top: 60vh;
-    left: 0px;
     width: calc(99vw);
-    height: 1vh;
     z-index: 1000;
     .loaderMask {
-      width: 5%;
-      height: 100%;
-      border-radius: 0px 0.5rem 0.5rem 0px;
       background-color: #fffb22dc;
+      border-radius: 0px 0.5rem 0.5rem 0px;
+      height: 100%;
+      width: 5%;
     }
   }
 }

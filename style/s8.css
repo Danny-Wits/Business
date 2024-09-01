@@ -1,38 +1,38 @@
 #s8 {
-  width: 100vw;
-  height: 100vh;
+  background-color: yellow;
   display: flex;
   flex-direction: column;
+  height: 100vh;
   justify-content: start;
-  background-color: yellow;
+  width: 100vw;
 }
 .s8container {
-  margin-top: 10vh;
-  width: 100%;
-  height: 88vh;
+  align-items: center;
   display: flex;
   flex-direction: column;
+  height: 88vh;
   justify-content: start;
-  align-items: center;
+  margin-top: 10vh;
+  width: 100%;
   .buttonContainer {
-    width: 94%;
-    display: flex;
-    justify-content: start;
     align-items: center;
+    background-color: yellow;
+    display: flex;
     flex-wrap: wrap;
     gap: 7%;
-    background-color: yellow;
+    justify-content: start;
+    width: 94%;
     button {
+      background-color: transparent;
+      border: 0px;
+      box-shadow: none;
+      color: black;
       cursor: pointer;
-      padding: 10px 30px;
-      min-width: 100px;
       font-family: "Caveat", cursive;
       font-size: 40px;
       font-weight: 500;
-      background-color: transparent;
-      color: black;
-      box-shadow: none;
-      border: 0px;
+      min-width: 100px;
+      padding: 10px 30px;
       transition: all 0.1s ease-in;
     }
     button.active {
@@ -41,19 +41,19 @@
   }
 }
 .mvv {
-  border-radius: 2rem;
   background-color: black;
-  height: 100%;
-  width: 94%;
+  border-radius: 2rem;
   display: grid;
   grid-template-columns: 50% 50%;
+  height: 100%;
+  width: 94%;
   .text {
-    padding: 22% 40px;
+    color: white;
     display: flex;
     flex-direction: column;
-    justify-content: flex-start;
     height: 100%;
-    color: white;
+    justify-content: flex-start;
+    padding: 22% 40px;
     text-align: justify;
     h2 {
       font-size: 48px;
@@ -63,37 +63,37 @@
     }
   }
   .mvv-img {
-    height: 100%;
     background-image: url("../images/model.jpeg");
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     filter: brightness(75%);
+    height: 100%;
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 720px) {
   #s8 {
     height: fit-content;
   }
   .s8container {
-    margin-top: 10vh;
     height: fit-content;
+    margin-top: 10vh;
     .buttonContainer {
       justify-content: center;
       button {
-        padding: 10px 10px;
-        min-width: 42px;
         font-family: "Caveat", cursive;
         font-size: 28px;
         font-weight: 500;
+        min-width: 42px;
+        padding: 10px 10px;
       }
     }
   }
   .mvv {
-    min-height: 70vh;
     border-radius: 1rem;
-    height: fit-content;
     grid-template-columns: auto;
+    height: fit-content;
+    min-height: 70vh;
     .mvv-img {
       height: 30vh;
     }

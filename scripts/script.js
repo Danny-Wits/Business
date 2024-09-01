@@ -9,7 +9,7 @@ const s4 = document.getElementById("s4");
 
 const elementIsVisibleInViewport = (el) => {
   const { top } = el.getBoundingClientRect();
-  return top >= 0 && top < window.innerHeight;
+  return top >= 0 && top < window.innerHeight - 20;
 };
 
 const forward = () => {
@@ -178,6 +178,34 @@ const scrollToElement = (e, closeMenu) => {
 //   e.preventDefault();
 //   scrollContainer.scrollLeft += scrollLength;
 // });
+//!s5 pillar animation for mobile
+const s5 = document.getElementById("s5");
+const s5list = document.getElementsByClassName("pillar");
+let s5index = 0;
+function s5Animation() {
+  if (!elementIsVisibleInViewport(s5)) {
+    return;
+  }
+  s5list[s5index].classList.add("hover");
+  s5index++;
+}
+let timeout = 3400;
+const startS5Animation = () => {
+  if (s5index == s5list.length) {
+    setTimeout(() => {
+      Array.from(s5list).forEach((e) => e.classList.remove("hover"));
+    }, 800);
+    s5index = 0;
+    return;
+  }
+
+  setTimeout(startS5Animation, timeout);
+  s5Animation();
+  timeout = 300;
+};
+if (window.innerWidth <= 720) {
+  startS5Animation();
+}
 
 //!s8 changing mvv
 const imageDiv = document
