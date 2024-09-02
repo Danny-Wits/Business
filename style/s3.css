@@ -1,6 +1,6 @@
 #s3 {
   align-items: center;
-  background-color: rgb(255, 251, 33);
+  background-color: yellow;
   display: flex;
   height: fit-content;
   justify-content: start;
@@ -60,7 +60,7 @@
 .service:hover {
   scale: 1.03;
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   #s3 {
     flex-direction: column;
     height: fit-content;

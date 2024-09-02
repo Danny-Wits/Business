@@ -100,8 +100,9 @@ nav:hover {
   display: none;
   outline: none;
   position: absolute;
-  right: 1rem;
-  top: 1rem;
+  right: 3%;
+  height: 80%;
+  top: 10%;
 }
 #toggle i {
   font-size: 2rem;
@@ -172,7 +173,7 @@ nav.toggled {
     color: black;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   nav {
     border-bottom: 1px solid yellow;
   }

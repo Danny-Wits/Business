@@ -26,6 +26,18 @@
       defer
     ></script>
     <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+    <!-- EmailJs setup -->
+    <script
+      type="text/javascript"
+      src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"
+    ></script>
+    <script type="text/javascript">
+      (function () {
+        emailjs.init({
+          publicKey: "6mXc5JrsbuG8YW-7n",
+        });
+      })();
+    </script>
     <!-- Local css -->
 
     <link rel="stylesheet" href="style/structure.css" />
@@ -35,10 +47,12 @@
     <link rel="stylesheet" href="/style/s4.css" />
     <link rel="stylesheet" href="/style/s5.css" />
     <link rel="stylesheet" href="/style/S6.css" />
+    <link rel="stylesheet" href="/style/S7.css" />
     <link rel="stylesheet" href="/style/s8.css" />
 
     <!-- Local js -->
     <script src="scripts/script.js" defer></script>
+    <script src="scripts/contact.js" defer></script>
 
     <title>Business</title>
   </head>
@@ -50,17 +64,17 @@
           <i class="bi bi-list" id="toggle-icon"></i>
         </button>
         <div id="link">
-          <a onclick="scrollToElement('s1',true)">Home</a>
-          <a onclick="scrollToElement('s4',true)">Projects</a>
-          <a onclick="scrollToElement('s3',true)">Services</a>
+          <a onclick="scrollToElement('s1')">Home</a>
+          <a onclick="scrollToElement('s4')">Projects</a>
+          <a onclick="scrollToElement('s3')">Services</a>
           <a href="https://my.timesreport.in/">Portfolio</a>
-          <a onclick="scrollToElement('s6',true)">About us</a>
+          <a onclick="scrollToElement('s6')">About us</a>
         </div>
         <div class="contact">
           <a href=""><i class="bi bi-facebook"></i></a>
           <a href=""><i class="bi bi-whatsapp"></i></a>
           <a href=""><i class="bi bi-envelope-at"></i></a>
-          <a onclick="scrollToElement('s5',true)">Get in Touch</a>
+          <a onclick="scrollToElement('s7')">Get in Touch</a>
         </div>
       </nav>
       <div class="mobile-nav">
@@ -74,7 +88,7 @@
           <a onclick="scrollToElement('s1',true)">Home</a>
           <a onclick="scrollToElement('s4',true)">Projects</a>
           <a onclick="scrollToElement('s3',true)">Services</a>
-          <a onclick="scrollToElement('s5')">Contact</a>
+          <a onclick="scrollToElement('s7',true)">Contact</a>
           <a href="https://my.timesreport.in/">Portfolio</a>
           <a onclick="scrollToElement('s6',true)">About us</a>
         </div>
@@ -101,7 +115,6 @@
     <div class="loader">
       <div class="blur"></div>
       <video
-        poster="./images/p4.jpg"
         src="./images/loaderVideo.mp4"
         id="loader-video"
         preload="auto"
@@ -259,7 +272,6 @@
           </div>
         </div>
       </section>
-
       <section id="s4">
         <div class="title">Projects</div>
         <div class="project-group">
@@ -330,6 +342,108 @@
         </div>
       </section>
 
+      <section id="s7">
+        <div class="s7container">
+          <div class="col s7left">
+            <div class="contactTitle">
+              <h2>Get In Touch</h2>
+              <p>
+                We're here to help! Reach out to us for any inquiries or
+                support.
+              </p>
+            </div>
+            <div class="contactInfo">
+              <div class="iconGroup">
+                <div class="icon">
+                  <i class="bi bi-telephone-inbound"></i>
+                </div>
+                <div class="details">
+                  <span>Phone</span>
+                  <span>+91 9105 678 890</span>
+                </div>
+              </div>
+              <div class="iconGroup">
+                <div class="icon">
+                  <i class="bi bi-envelope"></i>
+                </div>
+                <div class="details">
+                  <span>Email</span>
+                  <span>contact@example.com</span>
+                </div>
+              </div>
+              <div class="iconGroup">
+                <div class="icon">
+                  <i class="bi bi-geo-alt-fill"></i>
+                </div>
+                <div class="details">
+                  <span>Location</span>
+                  <span>Nagri, Doda, J&K India</span>
+                </div>
+              </div>
+            </div>
+            <div class="socialMedia">
+              <a href="#"><i class="bi bi-facebook"></i></a>
+              <a href="#"><i class="bi bi-twitter-x"></i></a>
+              <a href="#"><i class="bi bi-instagram"></i></a>
+              <a href="#"><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+          <div class="col s7right">
+            <div class="contact-container">
+              <h2 class="contactUs-title">Contact Us</h2>
+              <form id="contact-form" class="contact-form">
+                <div class="form-group">
+                  <label for="name">Name:</label>
+                  <input
+                    type="text"
+                    id="name"
+                    name="name"
+                    minlength="2"
+                    maxlength="50"
+                  />
+                </div>
+                <div class="form-group">
+                  <label for="email">Email:</label>
+                  <input type="email" id="email" name="email" required />
+                </div>
+                <div class="form-group">
+                  <label for="number">Phone No:</label>
+                  <input type="tel" id="number" name="number" required />
+                </div>
+                <div class="form-group">
+                  <label for="topic">Topic:</label>
+                  <select id="topic" name="topic">
+                    <option value="" disabled selected>Select a topic</option>
+                    <option value="technical-support">Technical Support</option>
+                    <option value="web-development">Web Development</option>
+                    <option value="mobile-app">Mobile App Development</option>
+                    <option value="consultation">Consultation</option>
+                    <option value="partnership">
+                      Partnership Opportunities
+                    </option>
+                    <option value="other">Other Inquiries</option>
+                  </select>
+                </div>
+                <div class="form-group">
+                  <label for="message">Message:</label>
+                  <textarea
+                    id="message"
+                    name="message"
+                    required
+                    minlength="5"
+                    maxlength="500"
+                    required
+                  ></textarea>
+                </div>
+                <button type="submit" class="submit-btn" id="submit-btn">
+                  Send Message
+                </button>
+              </form>
+              <div id="response-message" class="hidden"></div>
+            </div>
+          </div>
+        </div>
+      </section>
       <section id="s3">
         <p class="title">SERVICES</p>
         <div class="service-group">

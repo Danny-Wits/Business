@@ -71,7 +71,7 @@
     height: 100%;
   }
 }
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   #s8 {
     height: fit-content;
   }
@@ -82,10 +82,10 @@
       justify-content: center;
       button {
         font-family: "Caveat", cursive;
-        font-size: 28px;
+        font-size: 32px;
         font-weight: 500;
-        min-width: 42px;
-        padding: 10px 10px;
+        min-width: 40px;
+        padding: 10px 5px;
       }
     }
   }
@@ -93,7 +93,7 @@
     border-radius: 1rem;
     grid-template-columns: auto;
     height: fit-content;
-    min-height: 70vh;
+    min-height: 75vh;
     .mvv-img {
       height: 30vh;
     }

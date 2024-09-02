@@ -2,6 +2,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@400..700&family=Edu+AU+VIC+WA+NT+Hand:wght@400..700&family=Kaushan+Script&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
@@ -81,7 +82,7 @@ section {
   background-color: black;
   height: 100vh;
   left: 0px;
-  /* display: none; */
+  display: none;
   position: absolute;
   top: 0px;
   width: 100vw;
@@ -156,7 +157,7 @@ section {
   }
 }
 
-@media (max-width: 720px) {
+@media (max-width: 768px) {
   #section-selector {
     display: none;
   }

@@ -14,7 +14,7 @@
 
   .picture {
     background-image: url(../images/aboutUs.jpeg);
-    background-position: -130px;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     filter: brightness(70%);
@@ -85,7 +85,7 @@
     }
   }
 }
-@media (max-width: 600px) {
+@media (max-width: 768px) {
   #s6 {
     height: fit-content;
   }
@@ -94,8 +94,8 @@
     height: fit-content;
     margin-top: 10vh;
     padding-bottom: 20vh;
-    padding-left: 10px;
-    padding-right: 10px;
+    padding-left: 0px;
+    padding-right: 0px;
   }
   .left {
     height: fit-content;
@@ -104,7 +104,7 @@
     align-items: center;
     height: fit-content;
     justify-content: center;
-    padding: 10px 3vw;
+    padding: 10px 5vw;
 
     h2 {
       font-size: 64px;

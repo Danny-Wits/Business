@@ -149,7 +149,7 @@ const closeNavBar = () => {
 //!scroll to function
 const main = document.getElementsByTagName("main")[0];
 const scrollToElement = (e, closeMenu) => {
-  if (closeMenu && window.innerWidth < 720) toggle();
+  if (closeMenu && window.innerWidth <= 768) toggle();
   const element = document.getElementById(e);
 
   element.addEventListener("click", (event) => {
@@ -203,7 +203,7 @@ const startS5Animation = () => {
   s5Animation();
   timeout = 300;
 };
-if (window.innerWidth <= 720) {
+if (window.innerWidth <= 768) {
   startS5Animation();
 }
 
