@@ -169,3 +169,6 @@ section {
 main::-webkit-scrollbar {
   width: 0px;
 }
+.yellow {
+  color: yellow;
+}

@@ -78,7 +78,7 @@ const backward = () => {
 const startAnimation = () => {
   if (running) {
     forward();
-    setTimeout(startAnimation, 3000);
+    setTimeout(startAnimation, 5000);
   }
 };
 
@@ -152,9 +152,6 @@ const scrollToElement = (e, closeMenu) => {
   if (closeMenu && window.innerWidth <= 768) toggle();
   const element = document.getElementById(e);
 
-  element.addEventListener("click", (event) => {
-    event.preventDefault();
-  });
   main.scrollTop += element.getBoundingClientRect().y;
 };
 
@@ -230,4 +227,18 @@ function changeMVV(element) {
   imageDiv.style.backgroundImage = `url(${image}) `;
   titleDiv.textContent = title;
   subTitleDiv.textContent = info;
+}
+
+//! fill the form
+const defaultMessage = {
+  3: "Hi there, I want to build a site for my _",
+  2: "Hi there, I need a software solution for my _",
+  4: "Hi there, I want to a mobile application for my _",
+  5: "Hi there, I want to promote my _",
+};
+const service = document.getElementById("topic");
+const message = document.getElementById("message");
+function fillInForm(index) {
+  service.selectedIndex = index;
+  message.textContent = defaultMessage[index];
 }

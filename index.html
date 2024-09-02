@@ -54,17 +54,21 @@
     <script src="scripts/script.js" defer></script>
     <script src="scripts/contact.js" defer></script>
 
-    <title>Business</title>
+    <title>Oceans of Sites</title>
+    <link rel="icon" href="./images/logo.png" />
   </head>
   <body>
     <header>
       <nav>
-        <div id="title"><p>CodeCrew</p></div>
+        <div id="title" onclick="scrollToElement('s1')">
+          <img src="./images/logo.png" alt="OCEAN OF SITES" />
+          <p>Ocean of <span class="yellow">Sites</span></p>
+        </div>
         <button id="toggle" onclick="toggle()">
           <i class="bi bi-list" id="toggle-icon"></i>
         </button>
         <div id="link">
-          <a onclick="scrollToElement('s1')">Home</a>
+          <a onclick="scrollToElement('s1' )">Home</a>
           <a onclick="scrollToElement('s4')">Projects</a>
           <a onclick="scrollToElement('s3')">Services</a>
           <a href="https://my.timesreport.in/">Portfolio</a>
@@ -104,7 +108,7 @@
         <i class="bi bi-arrows-vertical"></i>
       </div>
       <div class="section-link">
-        <a onclick="scrollToElement('s5')">Team</a>
+        <a onclick="scrollToElement('s7')">Contacts</a>
         <i class="bi bi-arrows-vertical"></i>
       </div>
       <div class="section-link">
@@ -128,50 +132,61 @@
       <section id="s1">
         <div class="scroller">
           <div class="img-item" id="i1">
-            <div class="title">Innovate with Custom Software</div>
+            <div class="title">
+              <span>Take your</span>
+              <span class="yellow">Business</span>
+              <span>to the Web</span>
+            </div>
             <p>
-              Empower your business with tailor-made software solutions. Our
-              expert team transforms your unique challenges into opportunities,
-              delivering cutting-edge applications that streamline operations
-              and drive growth. From concept to deployment, we're your partners
-              in digital innovation.
+              Here at Oceans of Sites (TM) , we strive to provide your business
+              top-notch website for the cheapest price possible.
             </p>
-            <button>Explore Solutions</button>
+            <button onclick="scrollToElement('s7');fillInForm(3);">
+              Get a WebSite
+            </button>
           </div>
 
           <div class="img-item" id="i2">
-            <div class="title">Captivate with Stunning Websites</div>
+            <div class="title">
+              <span>Fast and Secure </span>
+              <span class="yellow">Software </span>
+              <span>Solution</span>
+            </div>
             <p>
-              Make a lasting impression in the digital world. Our web design and
-              development services blend creativity with functionality, crafting
-              responsive websites that engage your audience and elevate your
-              brand. Experience the perfect fusion of aesthetics and
-              performance.
+              Get a desktop application, tailored to you needs with in weeks.
+              Your own application is just a click away...
             </p>
-            <button>View Portfolio</button>
+            <button onclick="scrollToElement('s7');fillInForm(2);">
+              Start Your Software
+            </button>
           </div>
 
           <div class="img-item" id="i3">
-            <div class="title">Dominate the Mobile Landscape</div>
+            <div class="title">
+              <span>A</span>
+              <span class="yellow">Mobile app</span>
+              <span>for your business </span>
+            </div>
             <p>
-              Stay ahead in the mobile-driven market. Our mobile app development
-              team creates intuitive, feature-rich applications that keep your
-              customers connected on-the-go. From iOS to Android, we build
-              seamless experiences that set your business apart.
+              Bring your business in the palm of your hands with a affordable
+              mobile-app. If your want to grow fast you have to be mobile...
             </p>
-            <button>Start Your App</button>
+            <button onclick="scrollToElement('s7');fillInForm(4);">
+              Be Mobile
+            </button>
           </div>
 
           <div class="img-item" id="i4">
-            <div class="title">Lead the Digital Revolution</div>
+            <div class="title">
+              <span>Get your product</span> <span class="yellow">famous</span>
+            </div>
             <p>
-              Embrace the future of business with our comprehensive digital
-              transformation services. We integrate cutting-edge technologies
-              like AI, IoT, and cloud computing to revolutionize your processes,
-              enhance customer experiences, and position you at the forefront of
-              your industry.
+              We provide digital marketing services for your products on all the
+              different platform. Give your business a push it needs!
             </p>
-            <button>Transform Now</button>
+            <button onclick="scrollToElement('s7');fillInForm(5);">
+              Boost your Business
+            </button>
           </div>
 
           <div class="button-div">
@@ -411,12 +426,16 @@
                   <input type="tel" id="number" name="number" required />
                 </div>
                 <div class="form-group">
-                  <label for="topic">Topic:</label>
+                  <label for="topic">Service:</label>
                   <select id="topic" name="topic">
                     <option value="" disabled selected>Select a topic</option>
                     <option value="technical-support">Technical Support</option>
+                    <option value="Software Development">
+                      Software Development
+                    </option>
                     <option value="web-development">Web Development</option>
                     <option value="mobile-app">Mobile App Development</option>
+                    <option value="digital-marketing">Digital Marketing</option>
                     <option value="consultation">Consultation</option>
                     <option value="partnership">
                       Partnership Opportunities
@@ -436,7 +455,7 @@
                   ></textarea>
                 </div>
                 <button type="submit" class="submit-btn" id="submit-btn">
-                  Send Message
+                  Send Us
                 </button>
               </form>
               <div id="response-message" class="hidden"></div>

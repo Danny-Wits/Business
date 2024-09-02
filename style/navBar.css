@@ -21,13 +21,31 @@ nav:hover {
 }
 
 #title {
-  color: #fff;
-  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+  font-size: 1.2rem;
   font-weight: 600;
   letter-spacing: 2px;
   text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   text-transform: uppercase;
   transition: all 0.9s ease;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  img {
+    /* background-color: rgb(37, 37, 37); */
+    padding: 5px;
+    border-radius: 50%;
+    height: 7vh;
+    border: 3px yellow solid;
+    transition: all 1s;
+  }
+  img:hover {
+    margin-top: 8vh;
+    height: 18vh;
+    transform: rotate(360deg);
+  }
 }
 
 #link {
@@ -167,6 +185,10 @@ nav.toggled {
   border: 0px;
   #title {
     color: black;
+    img {
+      opacity: 0;
+      display: none;
+    }
   }
 
   #toggle i {
@@ -175,12 +197,16 @@ nav.toggled {
 }
 @media (max-width: 768px) {
   nav {
+    padding-left: 10px;
     border-bottom: 1px solid yellow;
   }
   #toggle {
     display: block;
   }
-
+  #title {
+    font-size: 16px;
+    padding-right: 10px;
+  }
   #link {
     display: none;
   }

@@ -175,14 +175,18 @@
 .form-group textarea {
   min-height: 30px;
   width: 100%;
-  font-family: "Edu AU VIC WA NT Hand", cursive;
-
+  font-family: "Caveat", cursive;
+  /* font-family: "Poppins", sans-serif; */
   background-color: yellow;
   border: 0px;
   padding: 0px 30px;
-  font-size: 20px;
+  font-size: 28px;
+  font-weight: 600;
   caret-color: black;
   transition: all 0.5s;
+}
+#name {
+  text-transform: uppercase;
 }
 
 .form-group input:focus,
@@ -198,6 +202,7 @@
   background-color: black;
   color: white;
   border-radius: 10px;
+  padding: 5px 0px;
 }
 
 .form-group textarea {
@@ -362,9 +367,9 @@
   .form-group input,
   .form-group select,
   .form-group textarea {
-    padding: 5px 10px;
-    font-size: 16px;
-    font-weight: 500;
+    padding: 5px 15px;
+    font-size: 24px;
+    font-weight: 600;
   }
   .form-group select {
     text-align: center;
