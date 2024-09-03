@@ -84,7 +84,7 @@ nav:hover {
   align-items: center;
   display: flex;
   justify-content: space-evenly;
-  margin-left: auto;
+
   width: fit-content;
   i {
     display: flex;
