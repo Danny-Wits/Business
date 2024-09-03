@@ -17,6 +17,7 @@ html {
   font-optical-sizing: auto;
   font-weight: 300;
   overflow: hidden;
+  background-color: black;
 }
 main {
   height: 100vh;
