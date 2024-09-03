@@ -83,7 +83,7 @@ section {
   background-color: black;
   height: 100vh;
   left: 0px;
-  display: none;
+  /* display: none; */
   position: absolute;
   top: 0px;
   width: 100vw;
@@ -107,7 +107,7 @@ section {
     position: absolute;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    top: calc(45vh);
+    top: 45vh;
     width: 100%;
     z-index: 1001;
 
