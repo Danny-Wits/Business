@@ -35,7 +35,7 @@ nav:hover {
   gap: 1rem;
   img {
     /* background-color: rgb(37, 37, 37); */
-    padding: 5px;
+    padding: 0px;
     border-radius: 50%;
     height: 7vh;
     border: 3px yellow solid;

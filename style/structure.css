@@ -7,13 +7,13 @@
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  user-select: none;
+  /* user-select: none; */
 }
 
 body,
 html {
   background-color: transparent;
-  font-family: "Titillium Web", sans-serif;
+  font-family: "Inter", sans-serif;
   font-optical-sizing: auto;
   font-weight: 300;
   overflow: hidden;
@@ -171,5 +171,8 @@ main::-webkit-scrollbar {
   width: 0px;
 }
 .yellow {
+  color: yellow;
+}
+b {
   color: yellow;
 }

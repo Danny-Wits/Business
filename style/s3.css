@@ -4,10 +4,10 @@
   display: flex;
   height: fit-content;
   justify-content: start;
-  padding-bottom: 50vh;
+  padding-bottom: 3vh;
 
   .title {
-    font-size: 15vh;
+    font-size: 13vh;
     transform: rotate(180deg);
     writing-mode: vertical-lr;
   }
@@ -66,8 +66,8 @@
     height: fit-content;
     min-height: 100vh;
     .title {
-      font-size: 4rem;
-      font-weight: 600;
+      font-size: 52px;
+      font-weight: 400;
       margin-top: 11vh;
       transform: rotate(0deg);
       writing-mode: horizontal-tb;

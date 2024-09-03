@@ -78,7 +78,7 @@ const backward = () => {
 const startAnimation = () => {
   if (running) {
     forward();
-    setTimeout(startAnimation, 5000);
+    setTimeout(startAnimation, 6000);
   }
 };
 
@@ -205,29 +205,29 @@ if (window.innerWidth <= 768) {
 }
 
 //!s8 changing mvv
-const imageDiv = document
-  .getElementById("mmv")
-  .getElementsByClassName("mvv-img")[0];
-const titleDiv = document
-  .getElementById("mmv")
-  .getElementsByClassName("mvv-title")[0];
-const subTitleDiv = document
-  .getElementById("mmv")
-  .getElementsByClassName("mvv-subtitle")[0];
+// const imageDiv = document
+//   .getElementById("mmv")
+//   .getElementsByClassName("mvv-img")[0];
+// const titleDiv = document
+//   .getElementById("mmv")
+//   .getElementsByClassName("mvv-title")[0];
+// const subTitleDiv = document
+//   .getElementById("mmv")
+//   .getElementsByClassName("mvv-subtitle")[0];
 
-const mvvButtonList = document.getElementsByClassName("mvv-btn");
-function changeMVV(element) {
-  const title = element.textContent;
-  const image = element.getAttribute("data-image");
-  const info = element.getAttribute("data-info");
-  Array.from(mvvButtonList).forEach((e) => {
-    e.classList.remove("active");
-  });
-  element.classList.add("active");
-  imageDiv.style.backgroundImage = `url(${image}) `;
-  titleDiv.textContent = title;
-  subTitleDiv.textContent = info;
-}
+// const mvvButtonList = document.getElementsByClassName("mvv-btn");
+// function changeMVV(element) {
+//   const title = element.textContent;
+//   const image = element.getAttribute("data-image");
+//   const info = element.getAttribute("data-info");
+//   Array.from(mvvButtonList).forEach((e) => {
+//     e.classList.remove("active");
+//   });
+//   element.classList.add("active");
+//   imageDiv.style.backgroundImage = `url(${image}) `;
+//   titleDiv.textContent = title;
+//   subTitleDiv.textContent = info;
+// }
 
 //! fill the form
 const defaultMessage = {
@@ -239,6 +239,8 @@ const defaultMessage = {
 const service = document.getElementById("topic");
 const message = document.getElementById("message");
 function fillInForm(index) {
+  console.log(index);
+
   service.selectedIndex = index;
   message.textContent = defaultMessage[index];
 }

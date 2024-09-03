@@ -32,56 +32,44 @@
     justify-content: space-evenly;
     padding: 2px 8vh;
     h2 {
-      font-family: "Caveat", cursive;
-      font-size: 80px;
+      /* font-family: "Caveat", cursive; */
+      font-size: 64px;
       font-weight: bolder;
     }
     p {
       font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
       font-size: large;
       font-weight: 200;
-      line-height: 4vh;
-      text-align: justify;
+      line-height: 5vh;
+      text-align: left;
+      margin-bottom: 20px;
     }
     button {
-      background-color: transparent;
-      border: 2px solid white;
-      border-radius: 50px;
-      color: white;
-      cursor: pointer;
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 1px;
-      overflow: hidden;
-      padding: 1rem 0.5rem;
-      position: relative;
-      text-transform: uppercase;
-      transition: all 0.3s ease;
-      width: 55%;
-    }
-
-    button::before {
+      width: fit-content;
+      padding: 15px 10px;
+      font-size: 16px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 10px;
+      gap: 10px;
       background-color: yellow;
-      content: "";
-      height: 100%;
-      left: -100%;
-      position: absolute;
-      top: 0;
-      transition: all 0.3s ease;
-      width: 100%;
-    }
-
-    button:hover::before {
-      left: 100%;
+      i {
+        font-size: 16px;
+        color: black;
+      }
+      box-shadow: none;
+      border: none;
+      transition: all 0.5s;
     }
 
     button:hover {
-      background-color: yellow;
-      border: 2px solid yellow;
-      box-shadow: 0 10px 20px rgba(0, 0, 0, 0.728);
-
-      color: black;
-      transform: translateY(-3px);
+      color: yellow;
+      background-color: black;
+      i {
+        color: yellow;
+        animation: iconAnimation 1s;
+      }
     }
   }
 }
@@ -104,22 +92,24 @@
     align-items: center;
     height: fit-content;
     justify-content: center;
+    align-items: flex-start;
     padding: 10px 5vw;
 
     h2 {
-      font-size: 64px;
+      font-size: 60px;
       padding-bottom: 20px;
     }
     p {
-      font-size: 14px;
+      font-size: 16px;
       font-weight: 300;
       padding-bottom: 20px;
+      line-height: 4.5vh;
     }
+
     button {
-      font-size: small;
-      margin-bottom: 20px;
-      padding: 0.7rem 0.5rem;
-      width: 70%;
+      font-size: 16px;
+      padding: 10px 16px;
+      margin-bottom: 5vh;
     }
   }
   .picture {
