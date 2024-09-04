@@ -35,10 +35,10 @@ nav:hover {
   gap: 1rem;
   img {
     /* background-color: rgb(37, 37, 37); */
-    padding: 0px;
     border-radius: 50%;
     height: 7vh;
-    border: 3px yellow solid;
+    padding: 5px;
+    background-color: rgb(33, 32, 20);
     transition: all 1s;
   }
   img:hover {
@@ -105,11 +105,22 @@ nav:hover {
     text-decoration: none;
   }
   a:nth-last-child(1) {
-    color: white;
+    color: black;
     cursor: pointer;
-    font-size: 18px;
-    padding: 5px 10px;
     text-decoration: none;
+    width: fit-content;
+    margin-left: 20px;
+    padding: 10px 10px;
+    font-size: 16px;
+    border: 2px solid black;
+    border-radius: 10px;
+    background-color: yellow;
+    transition: all 0.5s;
+  }
+  a:nth-last-child(1):hover {
+    color: yellow;
+    background-color: black;
+    border: 2px solid yellow;
   }
 }
 #toggle {

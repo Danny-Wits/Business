@@ -231,16 +231,17 @@ if (window.innerWidth <= 768) {
 
 //! fill the form
 const defaultMessage = {
+  0: "HI ! _",
   3: "Hi there, I want to build a site for my _",
   2: "Hi there, I need a software solution for my _",
   4: "Hi there, I want to a mobile application for my _",
   5: "Hi there, I want to promote my _",
 };
+const nameF = document.getElementById("name");
 const service = document.getElementById("topic");
 const message = document.getElementById("message");
 function fillInForm(index) {
-  console.log(index);
-
   service.selectedIndex = index;
   message.textContent = defaultMessage[index];
+  nameF.focus();
 }

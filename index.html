@@ -43,7 +43,8 @@
     <link rel="stylesheet" href="style/structure.css" />
     <link rel="stylesheet" href="/style/navBar.css" />
     <link rel="stylesheet" href="/style/s1.css" />
-    <link rel="stylesheet" href="/style/s3.css" />
+    <link rel="stylesheet" href="/style/s2.css" />
+    <!-- <link rel="stylesheet" href="/style/s3.css" /> -->
     <link rel="stylesheet" href="/style/s4.css" />
     <link rel="stylesheet" href="/style/s5.css" />
     <link rel="stylesheet" href="/style/S6.css" />
@@ -71,7 +72,7 @@
         <div id="link">
           <a onclick="scrollToElement('s1' )">Home</a>
           <a onclick="scrollToElement('s4')">Projects</a>
-          <a onclick="scrollToElement('s3')">Services</a>
+          <a onclick="scrollToElement('s2')">Services</a>
           <a href="https://my.timesreport.in/">Portfolio</a>
           <a onclick="scrollToElement('s6')">About us</a>
         </div>
@@ -79,7 +80,7 @@
           <a href=""><i class="bi bi-facebook"></i></a>
           <a href=""><i class="bi bi-whatsapp"></i></a>
           <a href=""><i class="bi bi-envelope-at"></i></a>
-          <a onclick="scrollToElement('s7')">Get in Touch</a>
+          <a onclick="scrollToElement('s7');fillInForm(0);">Get in Touch</a>
         </div>
       </nav>
       <div class="mobile-nav">
@@ -92,7 +93,7 @@
         <div id="mobile-link">
           <a onclick="scrollToElement('s1',true)">Home</a>
           <a onclick="scrollToElement('s4',true)">Projects</a>
-          <a onclick="scrollToElement('s3',true)">Services</a>
+          <a onclick="scrollToElement('s2',true)">Services</a>
           <a onclick="scrollToElement('s7',true)">Contact</a>
           <a href="https://my.timesreport.in/">Portfolio</a>
           <a onclick="scrollToElement('s6',true)">About us</a>
@@ -101,7 +102,7 @@
     </header>
     <div id="section-selector">
       <div class="section-link">
-        <a onclick="scrollToElement('s3')">Services</a>
+        <a onclick="scrollToElement('s2')">Services</a>
         <i class="bi bi-arrows-vertical"></i>
       </div>
       <div class="section-link">
@@ -335,7 +336,7 @@
           </div>
         </div>
       </section>
-      <section id="s3">
+      <!-- <section id="s3">
         <p class="title">SERVICES</p>
         <div class="service-group">
           <div class="service" id="ser1">
@@ -379,7 +380,7 @@
             </div>
           </div>
         </div>
-      </section>
+      </section> -->
       <!-- <section id="s8">
         <div class="s8container">
           <div class="buttonContainer">
@@ -425,7 +426,63 @@
           </div>
         </div>
       </section> -->
-
+      <section id="s2">
+        <div class="text">
+          <p class="small">WHAT WE DO ?</p>
+          <p class="heading">Our Services</p>
+          <p class="sub-heading">
+            We strive to provide all these services at most affordable pricing
+            and at the highest standard.
+          </p>
+        </div>
+        <div class="service-container">
+          <div class="service">
+            <i class="bi bi-code-slash"></i>
+            <p>Web Development</p>
+            <i class="bi bi-arrow-right"></i>
+          </div>
+          <div class="service">
+            <i class="bi bi-laptop"></i>
+            <p>Software Development</p>
+            <i class="bi bi-arrow-right"></i>
+          </div>
+          <div class="service">
+            <i class="bi bi-phone"></i>
+            <p>Mobile Development</p>
+            <i class="bi bi-arrow-right"></i>
+          </div>
+          <div class="service">
+            <i class="bi bi-bullseye"></i>
+            <p>Digital Marketing</p>
+            <i class="bi bi-arrow-right"></i>
+          </div>
+          <div class="service">
+            <i class="bi bi-bar-chart-line"></i>
+            <p>SEO Optimization</p>
+            <i class="bi bi-arrow-right"></i>
+          </div>
+          <div class="service">
+            <i class="bi bi-palette"></i>
+            <p>Logo Design</p>
+            <i class="bi bi-arrow-right"></i>
+          </div>
+          <div class="service">
+            <i class="bi bi-cloud-arrow-up"></i>
+            <p>Web Hosting</p>
+            <i class="bi bi-arrow-right"></i>
+          </div>
+          <div class="service">
+            <i class="bi bi-brush"></i>
+            <p>UI/UX Design</p>
+            <i class="bi bi-arrow-right"></i>
+          </div>
+          <div class="service">
+            <i class="bi bi-gear"></i>
+            <p>API Development</p>
+            <i class="bi bi-arrow-right"></i>
+          </div>
+        </div>
+      </section>
       <section id="s7">
         <div class="s7container">
           <div class="col s7left">
