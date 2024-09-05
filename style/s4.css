@@ -73,22 +73,22 @@
 }
 
 #pr1 {
-  background-image: url("../images/proj1.jpeg");
+  background-image: url("../images/proj1.webp");
 }
 #pr2 {
-  background-image: url("../images/proj2.jpg");
+  background-image: url("../images/proj2.webp");
 }
 #pr3 {
-  background-image: url("../images/proj5.jpg");
+  background-image: url("../images/proj5.webp");
 }
 #pr4 {
-  background-image: url("../images/proj4.jpg");
+  background-image: url("../images/proj4.webp");
 }
 #pr5 {
-  background-image: url("../images/proj3.jpg");
+  background-image: url("../images/proj3.webp");
 }
 #pr6 {
-  background-image: url("../images/proj1.jpeg");
+  background-image: url("../images/proj1.webp");
 }
 
 @keyframes backgroundScroll {
