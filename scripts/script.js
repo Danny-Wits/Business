@@ -150,15 +150,19 @@ const closeNavBar = () => {
     x: "100%",
     opacity: 0,
     display: "none",
-    ease: "power4.out",
   });
 };
 //!scroll to function
 const main = document.getElementsByTagName("main")[0];
-const scrollToElement = (e, closeMenu) => {
-  if (closeMenu && window.innerWidth <= 768) toggle();
+const scrollToElement = (e, closeMenu, timeout) => {
+  if (closeMenu && window.innerWidth <= 768) {
+    if (timeout) {
+      setTimeout(toggle, timeout);
+    } else {
+      toggle();
+    }
+  }
   const element = document.getElementById(e);
-
   main.scrollTop += element.getBoundingClientRect().y;
 };
 

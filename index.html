@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-
+    <meta name="mobile-web-app-capable" content="yes" />
     <!-- CDNS -->
 
     <link
@@ -14,7 +14,7 @@
       src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"
       defer
     ></script>
-    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/ScrollTrigger.min.js"></script>
+
     <!-- EmailJs setup -->
     <script
       type="text/javascript"
@@ -74,18 +74,44 @@
       </nav>
       <div class="mobile-nav">
         <div id="mobile-info">
+          <h2>You Innovate <br />We Create...</h2>
           <p>
-            You innovative<br />
-            We Create...
+            <b>Ocean Of Sites</b> is a web agency dedicated to helping
+            businesses build a strong online presence
           </p>
+          <p>
+            Whether you need a new website, a redesign, Ocean Of Sites is here
+            to support your success.
+          </p>
+          <div class="mobile-contact">
+            <a href=""><i class="bi bi-facebook"></i></a>
+            <a href=""><i class="bi bi-whatsapp"></i></a>
+            <a href=""><i class="bi bi-envelope-at"></i></a>
+          </div>
+
+          <a class="get-in-touch" onclick="scrollToElement('s7');fillInForm(0);"
+            >Get in Touch</a
+          >
         </div>
         <div id="mobile-link">
-          <a onclick="scrollToElement('s1',true)">Home</a>
-          <a onclick="scrollToElement('s4',true)">Projects</a>
-          <a onclick="scrollToElement('s2',true)">Services</a>
-          <a onclick="scrollToElement('s7',true)">Contact</a>
-          <a href="https://my.timesreport.in/">Portfolio</a>
-          <a onclick="scrollToElement('s6',true)">About us</a>
+          <a onclick="scrollToElement('s1',true,500)"
+            ><i class="bi bi-plus-lg"></i>Home</a
+          >
+          <a onclick="scrollToElement('s4',true,500)"
+            ><i class="bi bi-plus-lg"></i>Projects</a
+          >
+          <a onclick="scrollToElement('s2',true,500)"
+            ><i class="bi bi-plus-lg"></i>Services</a
+          >
+          <a onclick="scrollToElement('s7',true,500)"
+            ><i class="bi bi-plus-lg"></i>Contact</a
+          >
+          <a href="https://my.timesreport.in/"
+            ><i class="bi bi-plus-lg"></i>Portfolio</a
+          >
+          <a onclick="scrollToElement('s6',true,500)"
+            ><i class="bi bi-plus-lg"></i>About us</a
+          >
         </div>
       </div>
     </header>
