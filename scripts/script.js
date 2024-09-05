@@ -105,7 +105,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
   loaderStart();
   const image = document.querySelector("#last-img");
   if (image.complete) {
-    setTimeout(loaderEnd, 500);
+    setTimeout(loaderEnd, 600);
   } else {
     image.addEventListener("load", () => {
       setTimeout(loaderEnd, 200);
