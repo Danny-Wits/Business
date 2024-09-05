@@ -83,29 +83,40 @@ const startAnimation = () => {
 };
 
 //!loader
-const loaderVideo = document.getElementById("loader-video");
 
-loaderVideo.addEventListener("play", () => {
+const loaderStart = () => {
   gsap.to(".loaderMask", {
     width: "100%",
-    duration: 2.2,
+    duration: 3,
     ease: "none",
     display: "none",
   });
-});
-loaderVideo.addEventListener("ended", () => {
-  // gsap.fromTo("#main", { y: "100%" }, { y: 0, duration: 1 });
+};
+const loaderEnd = () => {
   gsap.to(".loader", {
     x: "-100%",
     duration: 0.7,
     display: "none",
   });
   startAnimation();
-});
+};
 
 document.addEventListener("DOMContentLoaded", (event) => {
-  loaderVideo.play();
+  loaderStart();
+  const image = document.querySelector("#last-img");
+  console.log("started");
+
+  if (image.complete) {
+    console.log("ended21");
+    setTimeout(loaderEnd, 1000);
+  } else {
+    image.addEventListener("load", () => {
+      console.log("ended2");
+      setTimeout(loaderEnd, 100);
+    });
+  }
 });
+
 //!nav toggle
 const navBar = document.getElementsByTagName("nav")[0];
 const mobileNav = document.getElementsByClassName("mobile-nav")[0];
@@ -155,26 +166,6 @@ const scrollToElement = (e, closeMenu) => {
   main.scrollTop += element.getBoundingClientRect().y;
 };
 
-//!s4 horizontal scroll
-
-// const scrollContainer = document.querySelector(".project-group");
-// scrollContainer.addEventListener("wheel", (e) => {
-//   const scrollLength = e.deltaY * 2;
-//   const scrollEndPosition =
-//     scrollContainer.scrollWidth - scrollContainer.clientWidth;
-//   if (scrollContainer.scrollLeft === 0 && scrollLength < 0) {
-//     return;
-//   }
-
-//   if (
-//     scrollContainer.scrollLeft >= scrollEndPosition - 10 &&
-//     scrollLength > 0
-//   ) {
-//     return;
-//   }
-//   e.preventDefault();
-//   scrollContainer.scrollLeft += scrollLength;
-// });
 //!s5 pillar animation for mobile
 const s5 = document.getElementsByClassName("pillar-group")[0];
 const s5list = document.getElementsByClassName("pillar");
@@ -203,31 +194,6 @@ const startS5Animation = () => {
 if (window.innerWidth <= 768) {
   startS5Animation();
 }
-
-//!s8 changing mvv
-// const imageDiv = document
-//   .getElementById("mmv")
-//   .getElementsByClassName("mvv-img")[0];
-// const titleDiv = document
-//   .getElementById("mmv")
-//   .getElementsByClassName("mvv-title")[0];
-// const subTitleDiv = document
-//   .getElementById("mmv")
-//   .getElementsByClassName("mvv-subtitle")[0];
-
-// const mvvButtonList = document.getElementsByClassName("mvv-btn");
-// function changeMVV(element) {
-//   const title = element.textContent;
-//   const image = element.getAttribute("data-image");
-//   const info = element.getAttribute("data-info");
-//   Array.from(mvvButtonList).forEach((e) => {
-//     e.classList.remove("active");
-//   });
-//   element.classList.add("active");
-//   imageDiv.style.backgroundImage = `url(${image}) `;
-//   titleDiv.textContent = title;
-//   subTitleDiv.textContent = info;
-// }
 
 //! fill the form
 const defaultMessage = {

@@ -89,52 +89,38 @@ section {
   top: 0px;
   width: 100vw;
   z-index: 999;
-  video {
-    height: 100%;
-    object-fit: cover;
-    width: 100%;
-  }
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+
   .title {
+    width: 100vw;
+    z-index: 1001;
+    background-color: red;
+    display: flex;
+    justify-content: center;
     align-items: center;
+    gap: 1rem;
+  }
+  p {
     animation: zoomInOut 1s infinite alternate;
     color: #fffb22;
-    display: flex;
-    font-family: "Caveat", cursive;
     font-size: 12rem;
     font-weight: 500;
-    gap: 1rem;
-    justify-content: center;
     margin-bottom: 1.5rem;
-    position: absolute;
-    text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
-    top: 45vh;
-    width: 100%;
-    z-index: 1001;
 
-    i {
+    i::before {
       animation: zoomInOut 1s infinite alternate;
       animation: rotation 1s infinite;
       color: #fffb22;
-      display: flex;
       font-size: 3rem;
     }
   }
-  .blur {
-    backdrop-filter: blur(3px);
-    background-color: rgba(0, 0, 0, 0.7);
-    height: 100%;
-    left: 0px;
-    position: absolute;
-    top: 0px;
-    width: 100%;
-    z-index: 1000;
-  }
   .loading {
     height: 1vh;
-    left: 0px;
-    position: absolute;
-    top: 60vh;
+
     width: calc(99vw);
     z-index: 1000;
     .loaderMask {
@@ -172,8 +158,5 @@ main::-webkit-scrollbar {
   width: 0px;
 }
 .yellow {
-  color: yellow;
-}
-b {
   color: yellow;
 }
