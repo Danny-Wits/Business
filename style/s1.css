@@ -133,7 +133,7 @@
   }
 }
 .button-div {
-  bottom: 7vh;
+  bottom: 8vh;
   display: flex;
 
   gap: 4rem;
@@ -181,7 +181,7 @@ i {
     display: none;
   }
   .img-item .s1left {
-    padding: 0px 20px 0px 10px;
+    padding: 0px 20px 0px 20px;
   }
   /* .s1left {
     align-items: center;
