@@ -135,7 +135,7 @@ const toggle = () => {
       {
         x: "0",
         opacity: 1,
-        duration: 1,
+        duration: 0.6,
         ease: "power1.out",
       }
     );

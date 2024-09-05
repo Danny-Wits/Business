@@ -194,11 +194,13 @@ i {
   }
   .img-item p {
     width: 90%;
+    font-size: 18px;
   }
 
   .img-item button,
   .button-div button {
     font-size: 14px;
     padding: 10px 10px;
+    font-weight: 700;
   }
 }

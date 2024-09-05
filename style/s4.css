@@ -5,7 +5,7 @@
   flex-direction: column;
   height: fit-content;
   justify-content: center;
-  padding-bottom: 30vh;
+  padding-bottom: 10vh;
   .title {
     color: white;
     font-family: "New Amsterdam", sans-serif;
