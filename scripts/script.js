@@ -87,7 +87,7 @@ const startAnimation = () => {
 const loaderStart = () => {
   gsap.to(".loaderMask", {
     width: "100%",
-    duration: 3,
+    duration: 2,
     ease: "none",
     display: "none",
   });
@@ -104,15 +104,11 @@ const loaderEnd = () => {
 document.addEventListener("DOMContentLoaded", (event) => {
   loaderStart();
   const image = document.querySelector("#last-img");
-  console.log("started");
-
   if (image.complete) {
-    console.log("ended21");
-    setTimeout(loaderEnd, 1000);
+    setTimeout(loaderEnd, 500);
   } else {
     image.addEventListener("load", () => {
-      console.log("ended2");
-      setTimeout(loaderEnd, 100);
+      setTimeout(loaderEnd, 200);
     });
   }
 });

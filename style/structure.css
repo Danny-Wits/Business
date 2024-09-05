@@ -25,9 +25,10 @@ main {
   scroll-behavior: smooth;
   scroll-snap-stop: normal;
   scroll-snap-type: y mandatory;
-  width: 101vw;
+  width: 100vw;
 }
 section {
+  width: 100vw;
   min-height: 100vh;
   scroll-snap-align: start;
   /* transition: all 2s ease-in; */
@@ -152,11 +153,17 @@ section {
   .loader .title {
     font-size: 2.5rem;
   }
+  main {
+    height: 100vh;
+    width: 100vw;
+    scroll-snap-type: none;
+  }
+}
+
+.yellow {
+  color: yellow;
 }
 /*scroller*/
 main::-webkit-scrollbar {
   width: 0px;
-}
-.yellow {
-  color: yellow;
 }

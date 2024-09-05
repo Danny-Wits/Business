@@ -140,27 +140,27 @@ nav:hover {
 .mobile-nav {
   background-color: #fffb25;
   display: none;
-  gap: 2vw;
+  gap: 1vw;
   justify-content: space-between;
   opacity: 0;
   position: fixed;
   right: 0px;
   top: 9.9vh;
   width: 100%;
-  height: 40vh;
+  height: 60vh;
   z-index: 1000;
 }
 #mobile-link {
-  align-items: center;
   display: flex;
   flex-direction: column;
   justify-content: space-evenly;
-  padding: 20px;
+  padding: 10px;
+  padding-right: 20px;
 }
 #mobile-link a {
   color: black;
   cursor: pointer;
-  font-size: 18px;
+  font-size: 20px;
   font-weight: 600;
   position: relative;
   text-decoration: none;
