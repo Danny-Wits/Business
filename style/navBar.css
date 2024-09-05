@@ -90,15 +90,15 @@ nav:hover {
     font-size: 1.4rem;
     padding: 5px 10px;
   }
-  /* .bi-facebook {
+  .bi-facebook:hover {
     color: #4267b2;
   }
-  .bi-whatsapp {
+  .bi-whatsapp:hover {
     color: #25d366;
   }
-  .bi-envelope-at {
+  .bi-envelope-at:hover {
     color: #ea4335;
-  } */
+  }
 
   a {
     text-decoration: none;
@@ -159,6 +159,7 @@ nav:hover {
   padding-right: 20px;
 }
 .get-in-touch {
+  cursor: pointer;
   padding: 10px 12px;
   background-color: black;
   color: white;
