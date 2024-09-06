@@ -158,8 +158,8 @@
   }
   .pillar-group {
     height: 100vh;
-    margin-top: 14vh !important;
-    margin-bottom: 10vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
     width: 100%;
     /* border: 1px dotted yellow; */
     .text {
