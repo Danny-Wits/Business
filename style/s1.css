@@ -25,6 +25,9 @@
   height: 100vh;
   overflow: hidden;
   position: relative;
+  .title {
+    max-width: 500px;
+  }
 }
 
 .img-item {
@@ -72,9 +75,7 @@
     border-radius: 2rem;
   }
 }
-.title {
-  max-width: 500px;
-}
+
 .s1left .title span {
   font-size: 42px;
   font-weight: 600;

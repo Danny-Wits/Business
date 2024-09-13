@@ -1,109 +1,174 @@
 #s8 {
-  background-color: #f9fb81;
   display: flex;
   flex-direction: column;
-  height: fit-content;
-  justify-content: start;
-  width: 100vw;
-}
-.s8container {
+  justify-content: flex-start;
   align-items: center;
-  display: flex;
-  flex-direction: column;
-  height: 88vh;
-  justify-content: start;
-  margin-top: 10vh;
-  width: 100%;
-  .buttonContainer {
-    align-items: center;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 7%;
-    justify-content: start;
-    width: 94%;
-    button {
-      background-color: transparent;
-      border: 0px;
-      box-shadow: none;
-      color: black;
-      cursor: pointer;
-      font-family: "Caveat", cursive;
-      font-size: 40px;
-      font-weight: 500;
-      min-width: 100px;
-      padding: 10px 30px;
-      transition: all 0.1s ease-in;
-    }
-    button.active {
-      text-decoration: underline;
-    }
-  }
-}
-.mvv {
   background-color: black;
-  border-radius: 2rem;
-  display: grid;
-  grid-template-columns: 50% 50%;
-  height: 100%;
-  width: 94%;
-  .text {
-    color: white;
+  color: white;
+  padding: 12vh 0px;
+  gap: 10vh;
+  .title {
+    padding: 10px 0px;
     display: flex;
     flex-direction: column;
-    height: 100%;
-    justify-content: flex-start;
-    padding: 22% 40px;
-    text-align: justify;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     h2 {
-      font-size: 48px;
+      font-size: 54px;
+      color: white;
+      font-weight: 900;
     }
     p {
-      font-size: large;
+      text-align: center;
+      font-size: 12px;
+      font-weight: 100;
     }
   }
-  .mvv-img {
-    background-image: url("../images/mission.jpeg");
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-    filter: brightness(75%);
-    height: 100%;
-    border-radius: 2rem;
+  .teamsection {
+    height: 55vh;
+    display: flex;
+    justify-content: flex-start;
+    overflow-x: auto;
+    width: 100%;
+    gap: 8vw;
+    padding: 0px 5vw;
+    .teamtitle {
+      margin-right: 20px;
+      writing-mode: vertical-lr;
+      text-orientation: sideways;
+      transform: rotate(180deg);
+      text-align: center;
+      font-size: 52px;
+      color: white;
+      font-weight: 800;
+      letter-spacing: 10px;
+    }
+    .card {
+      width: 20%;
+      min-width: 240px;
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      .image {
+        width: 100%;
+        height: 64%;
+        img {
+          width: 100%;
+          height: 100%;
+          transition: all 0.7s ease-out;
+          filter: grayscale(100%);
+        }
+      }
+      .info {
+        border-bottom-left-radius: 20px;
+        transition: all 0.2s ease-out;
+        height: 46%;
+        position: relative;
+        display: flex;
+        justify-content: flex-end;
+        .social {
+          position: absolute;
+          top: 0;
+          left: 0;
+          font-size: 2rem;
+          padding: 5px 20px;
+          background-color: yellow;
+          color: black;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+        .info-text {
+          transition: all 0.7s ease-out;
+          padding: 5px 10px;
+          background-color: rgba(255, 255, 255, 0.12);
+          width: 90%;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          align-items: flex-end;
+          color: white;
+          i {
+            font-size: 40px;
+            color: yellow;
+          }
+          .social-text {
+            padding: 15px 0px;
+
+            font-size: 12px;
+          }
+          .profile-name {
+            align-self: flex-start;
+            margin-left: 20%;
+          }
+          .profile-title {
+            margin-left: 20%;
+            font-size: 14px;
+            align-self: flex-start;
+          }
+        }
+      }
+    }
+    .card:hover {
+      img {
+        filter: grayscale(0%);
+      }
+      .info {
+        background-color: yellow;
+      }
+      .info-text {
+        background-color: yellow;
+        color: black;
+        i {
+          color: black;
+        }
+        i::before {
+          animation: move 1s;
+        }
+      }
+    }
+  }
+}
+@keyframes move {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0%);
   }
 }
 @media (max-width: 768px) {
   #s8 {
-    height: fit-content;
-  }
-  .s8container {
-    height: fit-content;
-    margin-top: 10vh;
-    .buttonContainer {
-      justify-content: center;
-      button {
-        font-family: "Caveat", cursive;
-        font-size: 32px;
-        font-weight: 500;
-        min-width: 40px;
-        padding: 10px 5px;
-      }
+    padding: 5vh 0px;
+    gap: 4vh;
+    .title {
+      padding: 10px;
     }
-  }
-  .mvv {
-    border-radius: 1rem;
-    grid-template-columns: auto;
-    height: fit-content;
-    min-height: 75vh;
-    .mvv-img {
-      height: 40vh;
-    }
-    .text {
-      padding: 10% 5%;
-      h2 {
-        font-size: 28px;
+    .teamsection {
+      height: 60vh;
+      padding: 10px;
+      gap: 7vw;
+
+      .teamtitle {
+        font-size: 40px;
+        letter-spacing: 10px;
       }
-      p {
-        font-size: medium;
+      .card {
+        height: 50vh;
+        min-width: 220px;
+        .info {
+          .info-text {
+            .profile-name {
+              padding: 2px 0px;
+              margin-left: 10px;
+            }
+            .profile-title {
+              padding: 2px 0px;
+              margin-left: 10px;
+            }
+          }
+        }
       }
     }
   }

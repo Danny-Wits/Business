@@ -85,7 +85,6 @@ section {
   background-color: black;
   height: 100vh;
   left: 0px;
-  /* display: none; */
   position: absolute;
   top: 0px;
   width: 100vw;
@@ -95,6 +94,7 @@ section {
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  /* display: none; */
 
   .title {
     width: 100vw;
