@@ -21,7 +21,7 @@
     }
     p {
       text-align: center;
-      font-size: 12px;
+      font-size: 14px;
       font-weight: 100;
     }
   }
@@ -33,20 +33,22 @@
     width: 100%;
     gap: 8vw;
     padding: 0px 5vw;
+    scroll-behavior: smooth;
     .teamtitle {
       margin-right: 20px;
       writing-mode: vertical-lr;
       text-orientation: sideways;
       transform: rotate(180deg);
       text-align: center;
-      font-size: 52px;
+      font-size: 50px;
       color: white;
       font-weight: 800;
-      letter-spacing: 10px;
+      letter-spacing: 1vh;
     }
     .card {
+      height: 50vh;
       width: 20%;
-      min-width: 240px;
+      min-width: 250px;
       display: flex;
       flex-direction: column;
       justify-content: flex-start;
@@ -92,6 +94,8 @@
           i {
             font-size: 40px;
             color: yellow;
+            display: flex;
+            justify-content: center;
           }
           .social-text {
             padding: 15px 0px;
@@ -129,6 +133,19 @@
       }
     }
   }
+  .teamsection::-webkit-scrollbar {
+    height: 6px;
+    width: 6px;
+  }
+
+  .teamsection::-webkit-scrollbar-thumb {
+    background-color: yellow;
+    border-radius: 20px;
+  }
+
+  .teamsection::-webkit-scrollbar-track {
+    background-color: transparent;
+  }
 }
 @keyframes move {
   from {
@@ -140,36 +157,64 @@
 }
 @media (max-width: 768px) {
   #s8 {
-    padding: 5vh 0px;
+    padding: 6vh 0px;
     gap: 4vh;
     .title {
+      h2 {
+        font-size: 50px;
+      }
+      p {
+        font-size: 13px;
+      }
       padding: 10px;
     }
     .teamsection {
-      height: 60vh;
+      height: 62vh;
       padding: 10px;
       gap: 7vw;
 
       .teamtitle {
         font-size: 40px;
-        letter-spacing: 10px;
+        letter-spacing: 1.5vh;
       }
       .card {
-        height: 50vh;
-        min-width: 220px;
+        height: 54vh;
+        min-width: 230px;
+
+        .image {
+          height: 62%;
+        }
         .info {
+          height: 38%;
+          .social {
+            font-size: 28px;
+            padding: 3px 12px;
+          }
           .info-text {
+            .social-text {
+              padding: 5px 0px 15px 0px;
+            }
+            i {
+              font-size: 30px;
+              padding-bottom: 5px;
+            }
             .profile-name {
-              padding: 2px 0px;
-              margin-left: 10px;
+              padding: 4px 0px 2px 0px;
+              margin-left: 15px;
             }
             .profile-title {
-              padding: 2px 0px;
-              margin-left: 10px;
+              margin-left: 15px;
             }
           }
         }
       }
+    }
+    .teamsection::-webkit-scrollbar {
+      height: 2px;
+    }
+    .teamsection::-webkit-scrollbar-thumb {
+      background-color: yellow;
+      border-radius: 20px;
     }
   }
 }

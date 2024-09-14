@@ -13,11 +13,13 @@
   width: 100%;
 
   .picture {
+    width: 98%;
     background-image: url(../images/aboutUs.webp);
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-    filter: brightness(70%);
+    /* filter: brightness(70%); */
+    box-shadow: 5px 10px yellow;
   }
 }
 .left {
@@ -93,15 +95,15 @@
     height: fit-content;
     justify-content: center;
     align-items: flex-start;
-    padding: 10px 5vw;
+    padding: 10px 4vw 10px 6vw;
 
     h2 {
-      font-size: 60px;
+      font-size: 54px;
       padding-bottom: 20px;
     }
     p {
       font-size: 16px;
-      font-weight: 300;
+      font-weight: 100;
       padding-bottom: 20px;
       line-height: 4.5vh;
     }
@@ -113,6 +115,8 @@
     }
   }
   .picture {
-    height: 60vh;
+    grid-row: 1;
+    height: 40vh;
+    margin-bottom: 20px;
   }
 }

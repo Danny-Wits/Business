@@ -36,7 +36,7 @@ nav:hover {
     /* background-color: rgb(37, 37, 37); */
     border-radius: 50%;
     height: 7vh;
-    padding: 5px;
+    padding: 4px;
     background-color: rgb(33, 32, 20);
     transition: all 1s;
   }
