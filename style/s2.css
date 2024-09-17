@@ -41,6 +41,7 @@
     align-items: start;
     min-height: 30vh;
     .service {
+      cursor: pointer;
       background-color: rgb(44, 44, 44);
       display: flex;
       justify-content: start;

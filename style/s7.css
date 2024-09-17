@@ -2,12 +2,13 @@
   font-family: "Poppins", sans-serif;
   background: #000;
   display: flex;
+  height: fit-content;
   flex-direction: column;
   justify-content: flex-end;
 }
 .s7container {
   width: 100vw;
-  height: 100vh;
+  min-height: 100vh;
   padding-top: 10vh;
   display: grid;
   grid-template-columns: 55% 45%;

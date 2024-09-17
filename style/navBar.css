@@ -148,6 +148,7 @@ nav:hover {
   width: 100%;
   min-height: 70vh;
   z-index: 1000;
+  color: black;
 }
 
 #mobile-link {

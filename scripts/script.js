@@ -85,6 +85,7 @@ const startAnimation = () => {
 //!loader
 
 const loaderStart = () => {
+  document.getElementsByClassName("loader")[0].style.display = "flex";
   gsap.to(".loaderMask", {
     width: "100%",
     duration: 2,
@@ -101,15 +102,22 @@ const loaderEnd = () => {
   startAnimation();
 };
 
+//!page load
 document.addEventListener("DOMContentLoaded", (event) => {
-  loaderStart();
-  const image = document.querySelector("#last-img");
-  if (image.complete) {
-    setTimeout(loaderEnd, 600);
+  let section = sessionStorage.getItem("section");
+  if (section) {
+    scrollToElement(section, false, 1000);
+    sessionStorage.setItem("section", null);
   } else {
-    image.addEventListener("load", () => {
-      setTimeout(loaderEnd, 200);
-    });
+    loaderStart();
+    const image = document.querySelector("#last-img");
+    if (image.complete) {
+      setTimeout(loaderEnd, 600);
+    } else {
+      image.addEventListener("load", () => {
+        setTimeout(loaderEnd, 200);
+      });
+    }
   }
 });
 
@@ -207,6 +215,7 @@ const nameF = document.getElementById("name");
 const service = document.getElementById("topic");
 const message = document.getElementById("message");
 function fillInForm(index) {
+  if (index == null) index = 0;
   service.selectedIndex = index;
   message.textContent = defaultMessage[index];
   nameF.focus();

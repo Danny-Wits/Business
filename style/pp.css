@@ -1,0 +1,39 @@
+.pp {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 15px;
+  width: 100vw;
+  padding: 12vh 20vh 10vh 5vh;
+  h1 {
+    font-size: 50px;
+  }
+  h2 {
+    color: yellow;
+  }
+  a {
+    color: yellow;
+  }
+  p {
+    font-size: 16px;
+    line-height: 20px;
+  }
+  h3 {
+    color: rgb(255, 238, 0);
+  }
+  ul {
+    list-style-type: square;
+  }
+}
+@media (max-width: 768px) {
+  .pp {
+    padding: 12vh 15px 10px 20px;
+    h1 {
+      font-size: 40px;
+    }
+    p {
+      font-size: 14px;
+    }
+  }
+}
