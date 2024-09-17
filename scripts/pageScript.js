@@ -41,7 +41,6 @@ const closeNavBar = () => {
 //!goto in Home
 
 function gotoSectionInHome(id) {
-  console.log(id);
   window.location.href = "index.html";
   sessionStorage.setItem("section", id);
 }

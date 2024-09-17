@@ -105,10 +105,10 @@ const loaderEnd = () => {
 //!page load
 document.addEventListener("DOMContentLoaded", (event) => {
   let section = sessionStorage.getItem("section");
-  if (section) {
+  if (section !== null && section !== "0") {
     scrollToElement(section, false, 1000);
-    sessionStorage.setItem("section", null);
-  } else {
+    sessionStorage.setItem("section", "0");
+  } else if (section === null) {
     loaderStart();
     const image = document.querySelector("#last-img");
     if (image.complete) {
